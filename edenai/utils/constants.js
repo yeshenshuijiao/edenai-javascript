@@ -1,3 +1,3 @@
-const url = "https://dev-api.edenai.run/"
+const url = "https://api.edenai.run/"
 
 export default url
