@@ -21,42 +21,22 @@ For all the proposed technologies, we provide a single endpoint: the service pro
 
 ## Getting started
 To start using Eden AI APIs, you first need to get your API Token.  You can get your token on your IAM [here](https://app.edenai.run/admin/account).
-Enter your access token:
+
+## Install via npm
 ```javascript
-  headers: { 
-    'Authorization': 'Bearer your_api_key', 
-    ...data.getHeaders()
-  },
+npm install edenai
 ```
 
 ## Usage
-### Initialization
-Select your API endpoint:
+If you want, for example, to use Ocr classic from Microsoft Azure with ES6 syntax :
 ```javascript
-var config = {
-  method: 'post',
-  url: 'https://api.edenai.run/v1/pretrained/+endpoint',
-  headers: { 
-    'Authorization': 'Bearer your_api_key', 
-    ...data.getHeaders()
-  },
-  data : data
-};
+import {Ocr} from "edenai"
+
+var ocrApis = new Ocr('YOUR API KEY')
+
+ocrApis.ocr('YOURFILEPATH.jpg', ['microsoft'], 'fr-FR').then(response => console.log(response))
 ```
-### Select parameters 
-Set parameters corresponding to the API, and providers APIs you want to run :
-Example:
-```javascript
-var fs = require('fs');
-var data = new FormData();
-data.append('files', fs.createReadStream('PATH TO YOUR FILE'));
-data.append('providers', '['PROVIDER(S)']');
-```
-### Get results
-```javascript
-var axios = require('axios');
-axios(config)
-```
+You can find the complete list of technologies we offer in the SDK on our [documentation](https://api.edenai.run/v1/redoc/).
 
 ## Support & Community
 
