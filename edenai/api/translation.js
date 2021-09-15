@@ -45,7 +45,7 @@ class Translation extends ApiBase {
 
   translate = (text, providers, source_language, target_language) => {
     const userData = this.formatDataTranslate(text, providers, source_language, target_language)
-    return this.post(userData, "v1/pretrained/translation/automatic_translation")
+    return this.post(userData, "v1/pretrained/text/automatic_translation")
   }
 
   languageDetection = (text, providers) => {

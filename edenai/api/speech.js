@@ -26,7 +26,7 @@ class Speech extends ApiBase {
   }
   
   formatDataTextToSpeech (text, providers, language, option) {
-    const user = {};
+    const user = new FormData();
       const key = [
         "text",
         "providers",
@@ -40,7 +40,7 @@ class Speech extends ApiBase {
         option
       ];
       for (let i = 0; i < value.length; i++) {
-        user[key[i]] = value[i];
+        user.append(key[i], value[i]);
       }
     return user  
   }

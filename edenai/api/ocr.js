@@ -7,7 +7,7 @@ class Ocr extends ApiBase {
     super(frontApiKey)
   }
 
-  formatData (filePath, providers, language) {
+  formatDataOcrInvoice (filePath, providers, language) {
     const user = new FormData();
       const key = [
         "files",
@@ -25,14 +25,32 @@ class Ocr extends ApiBase {
     return user  
   }
 
+  formatDataOcr (filePath, providers, language) {
+    const user = new FormData();
+      const key = [
+        "providers",
+        "files",
+        "language",
+      ];
+      const value = [
+        JSON.stringify(providers),
+        fs.createReadStream(filePath),
+        language
+      ];
+      for (let i = 0; i < value.length; i++) {
+        user.append(key[i], value[i]);
+      }
+    return user  
+  }
+
   ocrInvoice = (files, providers, language) => {
-    const userData = this.formatData(files, providers, language)
+    const userData = this.formatDataOcrInvoice(files, providers, language)
     return this.post(userData, "v1/pretrained/ocr/ocr_invoice")
   }
 
   ocr = (files, providers, language) => {
-    const userData = this.formatData(files, providers, language);
-    return this.post(userData, 'v1/pretrained/ocr/ocr')
+    const userData = this.formatDataOcr(files, providers, language);
+    return this.post(userData, 'v1/pretrained/vision/ocr')
   }
 
 }
