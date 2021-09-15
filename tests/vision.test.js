@@ -6,8 +6,8 @@ var apiKey = process.env.API_KEY
 var badApiKey = "badApiKey"
 var provider = ['amazon']
 var badProvider = ['jeanmichel']
-var fileToVision = "./edenai/testData/teamaicompare.jpg"
-var badFileToVision = "./edenai/testData/soundSample.mp3"
+var fileToVision = "./testData/teamaicompare.jpg"
+var badFileToVision = "./testData/soundSample.mp3"
 
 function testRequestObjectDetection(apiKey, provider, file){
   const testRequest = new Vision(apiKey)

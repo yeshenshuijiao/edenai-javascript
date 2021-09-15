@@ -6,8 +6,8 @@ var apiKey = process.env.API_KEY
 var badApiKey = "badApiKey"
 var provider = ['microsoft']
 var badProvider = ['jeanmichel']
-var fileToOcr = "./edenai/testData/ChineseDoc.jpg"
-var badFileToOcr = "./edenai/testData/soundSample.mp3"
+var fileToOcr = "./testData/ChineseDoc.jpg"
+var badFileToOcr = "./testData/soundSample.mp3"
 var language = "fr-FR"
 var badLanguage = "badLanguage"
 
