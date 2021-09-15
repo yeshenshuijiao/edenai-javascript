@@ -4,4 +4,4 @@ import Speech from './edenai/api/speech.js'
 import Translation from './edenai/api/translation.js'
 import Vision from './edenai/api/vision.js'
 
-export { Ocr };
+export { Ocr, Text, Speech, Translation, Vision };
