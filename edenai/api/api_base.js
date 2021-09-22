@@ -6,16 +6,7 @@ class ApiBase {
     if (this.constructor === ApiBase) {
       throw new TypeError('Abstract class "ApiBase" cannot be instantiated directly');
     };
-
-    // let service = axios.create({
-    //   headers: {
-    //     'Authorization' : `Bearer ${frontApiKey}`,
-    //     ...form.getHeaders()
-    //   },
-    // })
     
-    // this.service = service
-    // console.log('HEADEERS', service)
     this.apiKey = frontApiKey
   }
 
