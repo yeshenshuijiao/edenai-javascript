@@ -50,7 +50,7 @@ class Ocr extends ApiBase {
 
   ocr = (files, providers, language) => {
     const userData = this.formatDataOcr(files, providers, language);
-    return this.post(userData, 'v1/pretrained/vision/ocr')
+    return this.post(userData, 'v1/pretrained/ocr/ocr')
   }
 
 }
