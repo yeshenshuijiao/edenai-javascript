@@ -1,18 +1,8 @@
-var axios = require('axios');
-var FormData = require('form-data');
-var fs = require('fs');
-var data = new FormData();
-data.append('files', fs.createReadStream('PATH TO YOUR FILE'));
-data.append('providers', '['PROVIDER(S)']');
+// npm install edenai
 
-var config = {
-  method: 'post',
-  url: 'https://api.edenai.run/v1/pretrained/vision/explicit_content_detection',
-  headers: { 
-    'Authorization': 'Bearer your_api_key', 
-    ...data.getHeaders()
-  },
-  data : data
-};
+import {Vision} from "edenai"
 
-axios(config)
+var visionApis = new Vision('YOUR API KEY')
+
+visionApis.explicitContentDetection(['PROVIDER(S)'], 'PATH TO YOUR FILE')
+.then(response => console.log(response))

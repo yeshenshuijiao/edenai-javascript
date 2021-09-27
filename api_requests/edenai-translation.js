@@ -1,19 +1,8 @@
-var axios = require('axios');
-var FormData = require('form-data');
-var data = new FormData();
-data.append('text_to_translate', ''YOUR TEXT'');
-data.append('providers', '['PROVIDER(S)']');
-data.append('source_language', 'SOURCE LANGUAGE');
-data.append('target_language', 'TARGET LANGUAGE');
+// npm install edenai
 
-var config = {
-  method: 'post',
-  url: 'https://api.edenai.run/v1/pretrained/text/automatic_translation',
-  headers: { 
-    'Authorization': 'Bearer Yyour_api_key', 
-    ...data.getHeaders()
-  },
-  data : data
-};
+import {Translation} from "edenai"
 
-axios(config)
+var translationApis = new Translation('YOUR API KEY')
+
+translationApis.translate('YOUR TEXT', ['PROVIDER(S)'], 'SOURCE LANGUAGE', 'TARGET LANGUAGE')
+.then(response => console.log(response))

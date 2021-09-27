@@ -1,19 +1,8 @@
-var axios = require('axios');
-var FormData = require('form-data');
-var fs = require('fs');
-var data = new FormData();
-data.append('providers', '['PROVIDER(S)']');
-data.append('files', fs.createReadStream('PATH TO YOUR FILE'));
-data.append('language', 'LANGUAGE');
+// npm install edenai
 
-var config = {
-  method: 'post',
-  url: 'https://api.edenai.run/v1/pretrained/audio/speech_recognition',
-  headers: { 
-    'Authorization': 'Bearer your_api_key', 
-    ...data.getHeaders()
-  },
-  data : data
-};
+import {Speech} from "edenai"
 
-axios(config)
+var speechApis = new Speech('YOUR API KEY')
+
+speechApis.speechToText(['PROVIDER(S)'], 'YOURFILEPATH', 'LANGUAGE')
+.then(response => console.log(response))

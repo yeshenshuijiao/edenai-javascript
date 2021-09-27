@@ -1,15 +1,8 @@
-import requests
+// npm install edenai
 
-url = "https://api.edenai.run/v1/pretrained/text/sentiment_analysis"
+import {Text} from "edenai"
 
-payload={'text': ''YOUR TEXT'',
-'providers': '['PROVIDER(S)']',
-'language': 'LANGUAGE'}
-files=[
+var textApis = new Text('YOUR API KEY')
 
-]
-headers = {
-  'Authorization': 'Bearer your_api_key'
-}
-
-response = requests.request("POST", url, headers=headers, data=payload, files=files)
+textApis.sentimentAnalysis('YOUR TEXT', ['PROVIDER(S)'], 'LANGUAGE')
+.then(response => console.log(response))
