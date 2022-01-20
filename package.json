@@ -1,45 +1,41 @@
 {
-  "name": "edenai",
-  "version": "1.0.2",
-  "description": "\"Eden AI simplifies the use and integration of AI technologies by providing a unique API connected to the best AI engines and combined with a powerful management platform. The platform covers a wide range of AI technologies.\"",
-  "keywords": [
-    "edenai",
-    "machine learning",
-    "ai",
-    "artificial intelligence",
-    "ocr",
-    "object detection",
-    "keyword extraction",
-    "face detection"
-  ],
-  "main": "index.js",
+  "name": "eden_ai_api_documentation",
+  "version": "v1",
+  "description": "a_hrefhttpsapp_edenai_runuserlogin_target_blankimg_srcstaticimageswelcome_pnga__Welcome_Eden_AI_simplifies_the_use_and_integration_of_AI_technologies_by_providing_a_unique_API_connected_to_the_best_AI_engines_and_combined_with_a_powerful_management_platform_The_platform_covers_a_wide_range_of_AI_technologies_Vision__a_hrefhttpswww_edenai_covision_target_blankwww_edenai_covisiona__Text__NLP_a_hrefhttpswww_edenai_cotext_target_blankwww_edenai_cotexta__Speech__Audio_a_hrefhttpswww_edenai_cospeech_target_blankwww_edenai_cospeecha__OCR_a_hrefhttpswww_edenai_coocr_target_blankwww_edenai_coocra__Machine_Translation_a_hrefhttpswww_edenai_cotranslation_target_blankwww_edenai_cotranslationa__Prediction_a_hrefhttpswww_edenai_coprediction_target_blankwww_edenai_copredictiona_For_all_the_proposed_technologies_we_provide_a_single_endpoint_the_service_provider_is_only_a_parameter_that_can_be_changed_very_easily__All_the_engines_available_on_Eden_AI_are_listed_here_www_edenai_cocatalog_Support__community_1__SupportIf_you_have_any_problems_please_contact_us_at_this_email_address_contactedenai_co__We_will_be_happy_to_help_you_in_the_use_of_Eden_AI___2__CommunityYou_can_interact_personally_with_other_people_actively_using_and_working_with_Eden_AI_and_join_our__a_hrefhttpsjoin_slack_comtedenaishared_invitezt_t68c2pr9_4lDKQ_qEqmLiWNptQzB_6w_target_blankSlack_communitya_We_are_always_updating_our_docs_so_a_good_way_to_always_stay_up_to_date_is_to_watch_our_documentation_repo_on_Github_a_hrefhttpsgithub_comedenai_target_blankhttpsgithub_comedenaia__3__BlogWe_also_regularly_publish_various_articles_with_Eden_AI_news_and_technical_articles_on_the_different_AI_engines_that_exist__You_can_find_these_articles_here_a_hrefhttpswww_edenai_coblog_target_blankhttpswww_edenai_cobloga__Authentication__Create_account_Register_staticimagesregister_pngTo_create_an_account_please_go_to_this_link_a_hrefhttpsapp_edenai_runuserlogin_target_blankapp_edenai_runuserlogina__You_can_create_an_account_with_your_email_address_or_by_using_your_account_on_available_platforms__Gmail_Github_etc___By_creating_an_account_with_your_email_address_you_will_receive_a_confirmation_email_with_a_link_to_click__Check_your_spam_if_needed_and_contact_us_if_you_have_any_problem_contactedenai_co_Login_staticimageslogin_png_API_key_By_going_to_your_account_page_on_the_platform_a_hrefhttpsapp_edenai_runadminaccount_target_blankhttpsapp_edenai_runadminaccounta_you_will_have_access_to_your_API_key_to_start_using_the_different_AI_engines_offered_by_Eden_AI___api_key_staticimagesapi_key_png_Portal_Guide_Eden_AI_provides_a_web_portal_that_allows_you_to_do_several_tasks_portal_staticimagesportal_png_1__Benchmark_and_testThe_platform_allows_you_to_easily_compare_competing_engines_without_having_to_code__By_uploading_your_data_you_have_access_to_the_prediction_results_of_the_different_engines__This_gives_you_a_first_overview_of_the_performance_of_AI_engines____benchmark_staticimagesbenchmark_png_2__Cost_managementThe_a_hrefhttpsapp_edenai_runadmincost_management_target_blankcost_management_pagea_also_allows_you_to_centralize_the_costs_associated_with_the_different_engines_with_various_filters_to_simplify_the_analysis__This_page_also_allows_you_to_define_monthly_budget_limits_not_to_be_exceeded_to_secure_the_use_of_different_AI_engines___cost_management_staticimagescost_management_png_3__AccountThe_a_hrefhttpsapp_edenai_runadminaccount_target_blankaccount_pagea_allows_you_to_change_your_information_and_password__It_also_gives_you_access_to_your_API_key_that_you_can_renew_if_needed__This_page_also_allows_you_to_add_a_credit_card_and_to_buy_with_credits_to_use_all_the_engines_offered_by_Eden_AI___account_staticimagesaccount_png_API_Guide_Eden_AI_API_has_different_endpoints_that_refer_to_different_AI_services__The_connected_providers_are_thus_parameters_that_the_user_can_easily_change_",
+  "license": "Unlicense",
+  "main": "src/edenai/index.js",
   "scripts": {
-    "test": "node --experimental-vm-modules node_modules/.bin/jest"
+    "test": "mocha --require @babel/register --recursive"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/edenai/edenai-javascript.git"
+  "browser": {
+    "fs": false
   },
-  "author": {
-    "name": "François Humbert",
-		"email": "francois.humbert@datagenius.fr"
-  },
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/edenai/edenai-javascript/issues"
-  },
-  "homepage": "https://github.com/edenai/edenai-javascript#readme",
   "dependencies": {
-    "axios": "^0.21.1",
-    "dotenv": "^10.0.0",
-    "form-data": "^4.0.0"
+    "@babel/cli": "^7.0.0",
+    "superagent": "^5.3.0"
   },
-  "type": "module",
   "devDependencies": {
-    "jest": "^27.1.1"
-  },
-  "jest": {
-    "verbose": true,
-    "testTimeout": 30000
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-decorators": "^7.0.0",
+    "@babel/plugin-proposal-do-expressions": "^7.0.0",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
+    "@babel/plugin-proposal-function-bind": "^7.0.0",
+    "@babel/plugin-proposal-function-sent": "^7.0.0",
+    "@babel/plugin-proposal-json-strings": "^7.0.0",
+    "@babel/plugin-proposal-logical-assignment-operators": "^7.0.0",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.0.0",
+    "@babel/plugin-proposal-numeric-separator": "^7.0.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.0.0",
+    "@babel/plugin-proposal-pipeline-operator": "^7.0.0",
+    "@babel/plugin-proposal-throw-expressions": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-syntax-import-meta": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "expect.js": "^0.3.1",
+    "mocha": "^8.0.1",
+    "sinon": "^7.2.0"
   }
 }
