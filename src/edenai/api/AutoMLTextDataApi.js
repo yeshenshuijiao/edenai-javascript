@@ -1,6 +1,6 @@
 /*
  * Eden AI API Documentation
- * <a href=\"https://app.edenai.run/user/login\" target=\"_blank\"><img src=\"/static/images/welcome.png\"></a>. # Welcome  Eden AI simplifies the use and integration of AI technologies by providing a unique API connected to the best AI engines and combined with a powerful management platform. The platform covers a wide range of AI technologies: * Vision:  <a href=\"https://www.edenai.co/vision\" target=\"_blank\">www.edenai.co/vision</a>. * Text & NLP: <a href=\"https://www.edenai.co/text\" target=\"_blank\">www.edenai.co/text</a>. * Speech & Audio: <a href=\"https://www.edenai.co/speech\" target=\"_blank\">www.edenai.co/speech</a>. * OCR: <a href=\"https://www.edenai.co/ocr\" target=\"_blank\">www.edenai.co/ocr</a>. * Machine Translation: <a href=\"https://www.edenai.co/translation\" target=\"_blank\">www.edenai.co/translation</a>. * Prediction: <a href=\"https://www.edenai.co/prediction\" target=\"_blank\">www.edenai.co/prediction</a>.  For all the proposed technologies, we provide a single endpoint:  the service provider is only a parameter that can be changed very easily. All the engines available on Eden AI are listed here: www.edenai.co/catalog  # Support & community  ### 1- Support If you have any problems, please contact us at this email address: contact@edenai.co. We will be happy to help you in the use of Eden AI.   ### 2- Community  You can interact personally with other people actively using and working with Eden AI and join our  <a href=\"https://join.slack.com/t/edenai/shared_invite/zt-t68c2pr9-4lDKQ_qEqmLiWNptQzB_6w\" target=\"_blank\">Slack community</a>.  We are always updating our docs, so a good way to always stay up to date is to watch our documentation repo on Github: <a href=\"https://github.com/edenai\" target=\"_blank\">https://github.com/edenai</a>.  ### 3- Blog  We also regularly publish various articles with Eden AI news and technical articles on the different AI engines that exist. You can find these articles here: <a href=\"https://www.edenai.co/blog\" target=\"_blank\">https://www.edenai.co/blog</a>.   # Authentication  ## Create account ![Register](/static/images/register.png)  To create an account, please go to this link: <a href=\"https://app.edenai.run/user/login\" target=\"_blank\">app.edenai.run/user/login</a>. You can create an account with your email address or by using your account on available platforms (Gmail, Github, etc.).   By creating an account with your email address, you will receive a confirmation email with a link to click. Check your spam if needed and contact us if you have any problem: contact@edenai.co  ![Login](/static/images/login.png) ## API key  By going to your account page on the platform: <a href=\"https://app.edenai.run/admin/account\" target=\"_blank\">https://app.edenai.run/admin/account</a>, you will have access to your API key to start using the different AI engines offered by Eden AI.   ![api_key](/static/images/api_key.png) # Portal Guide  Eden AI provides a web portal that allows you to do several tasks:  ![portal](/static/images/portal.png)  ### 1- Benchmark and test The platform allows you to easily compare competing engines without having to code. By uploading your data, you have access to the prediction results of the different engines. This gives you a first overview of the performance of AI engines.   ![benchmark](/static/images/benchmark.png)  ### 2- Cost management The <a href=\"https://app.edenai.run/admin/cost-management\" target=\"_blank\">cost management page</a> also allows you to centralize the costs associated with the different engines with various filters to simplify the analysis.   This page also allows you to define monthly budget limits not to be exceeded to secure the use of different AI engines.   ![cost-management](/static/images/cost_management.png) ### 3- Account The <a href=\"https://app.edenai.run/admin/account\" target=\"_blank\">account page</a> allows you to change your information and password. It also gives you access to your API key that you can renew if needed.   This page also allows you to add a credit card and to buy with credits to use all the engines offered by Eden AI.   ![account](/static/images/account.png)   # API Guide  Eden AI API has different endpoints that refer to different AI services. The connected providers are thus parameters that the user can easily change. 
+ * <a href=\"https://app.edenai.run/user/login\" target=\"_blank\"><img src=\"/static/images/welcome.png\"></a>. # Welcome  Eden AI simplifies the use and integration of AI technologies by providing a unique API connected to the best AI engines and combined with a powerful management platform. The platform covers a wide range of AI technologies: * Vision:  <a href=\"https://www.edenai.co/vision\" target=\"_blank\">www.edenai.co/vision</a>. * Text & NLP: <a href=\"https://www.edenai.co/text\" target=\"_blank\">www.edenai.co/text</a>. * Speech & Audio: <a href=\"https://www.edenai.co/speech\" target=\"_blank\">www.edenai.co/speech</a>. * OCR: <a href=\"https://www.edenai.co/ocr\" target=\"_blank\">www.edenai.co/ocr</a>. * Machine Translation: <a href=\"https://www.edenai.co/translation\" target=\"_blank\">www.edenai.co/translation</a>. * Prediction: <a href=\"https://www.edenai.co/prediction\" target=\"_blank\">www.edenai.co/prediction</a>.  For all the proposed technologies, we provide a single endpoint:  the service provider is only a parameter that can be changed very easily. All the engines available on Eden AI are listed here: www.edenai.co/catalog  # Support & community  ### 1- Support If you have any problems, please contact us at this email address: contact@edenai.co. We will be happy to help you in the use of Eden AI.   ### 2- Community  You can interact personally with other people actively using and working with Eden AI and join our  <a href=\"https://join.slack.com/t/edenai/shared_invite/zt-t68c2pr9-4lDKQ_qEqmLiWNptQzB_6w\" target=\"_blank\">Slack community</a>.  We are always updating our docs, so a good way to always stay up to date is to watch our documentation repo on Github: <a href=\"https://github.com/edenai\" target=\"_blank\">https://github.com/edenai</a>.  ### 3- Blog  We also regularly publish various articles with Eden AI news and technical articles on the different AI engines that exist. You can find these articles here: <a href=\"https://www.edenai.co/blog\" target=\"_blank\">https://www.edenai.co/blog</a>.   # Authentication  ## Create account ![Register](/static/images/register.png)  To create an account, please go to this link: <a href=\"https://app.edenai.run/user/login\" target=\"_blank\">app.edenai.run/user/login</a>. You can create an account with your email address or by using your account on available platforms (Gmail, Github, etc.).   By creating an account with your email address, you will receive a confirmation email with a link to click. Check your spam if needed and contact us if you have any problem: contact@edenai.co  ![Login](/static/images/login.png) ## API key  By going to your account page on the platform: <a href=\"https://app.edenai.run/admin/account\" target=\"_blank\">https://app.edenai.run/admin/account</a>, you will have access to your API key to start using the different AI engines offered by Eden AI.   ![api_key](/static/images/api_key.png)  ## Sandbox API key  By going to your account page on the platform: <a href=\"https://app.edenai.run/admin/account\" target=\"_blank\">https://app.edenai.run/admin/account</a>, you will also have access to your **Sandbox** API key that will allow you to make free calls and get dummy responses in order to implement and debug Eden AI without consuming credits.   ![api_key](/static/images/sandbox_api_key.png)  # Portal Guide  Eden AI provides a web portal that allows you to do several tasks:  ![portal](/static/images/portal.png)  ### 1- Benchmark and test The platform allows you to easily compare competing engines without having to code. By uploading your data, you have access to the prediction results of the different engines. This gives you a first overview of the performance of AI engines.   ![benchmark](/static/images/benchmark.png)  ### 2- Cost management The <a href=\"https://app.edenai.run/admin/cost-management\" target=\"_blank\">cost management page</a> also allows you to centralize the costs associated with the different engines with various filters to simplify the analysis.   This page also allows you to define monthly budget limits not to be exceeded to secure the use of different AI engines.   ![cost-management](/static/images/cost_management.png) ### 3- Account The <a href=\"https://app.edenai.run/admin/account\" target=\"_blank\">account page</a> allows you to change your information and password. It also gives you access to your API key that you can renew if needed.   This page also allows you to add a credit card and to buy with credits to use all the engines offered by Eden AI.   ![account](/static/images/account.png)   # API Guide  Eden AI API has different endpoints that refer to different AI services. The connected providers are thus parameters that the user can easily change. 
  *
  * OpenAPI spec version: v1
  * Contact: contact@edenai.co
@@ -8,35 +8,49 @@
  * NOTE: This class is auto generated by the swagger code generator program.
  * https://github.com/swagger-api/swagger-codegen.git
  *
- * Swagger Codegen version: 3.0.31
+ * Swagger Codegen version: 2.4.24
  *
  * Do not edit the class manually.
  *
  */
-import {ApiClient} from "../ApiClient";
 
-/**
-* AutoMLTextData service.
-* @module edenai/api/AutoMLTextDataApi
-* @version v1
-*/
-export class AutoMLTextDataApi {
-
-    /**
-    * Constructs a new AutoMLTextDataApi. 
-    * @alias module:edenai/api/AutoMLTextDataApi
-    * @class
-    * @param {module:edenai/ApiClient} [apiClient] Optional API client implementation to use,
-    * default to {@link module:edenai/ApiClient#instanc
-    e} if unspecified.
-    */
-    constructor(apiClient) {
-        this.apiClient = apiClient || ApiClient.instance;
+(function(root, factory) {
+  if (typeof define === 'function' && define.amd) {
+    // AMD. Register as an anonymous module.
+    define(['edenai/ApiClient'], factory);
+  } else if (typeof module === 'object' && module.exports) {
+    // CommonJS-like environments that support module.exports, like Node.
+    module.exports = factory(require('../ApiClient'));
+  } else {
+    // Browser globals (root is window)
+    if (!root.EdenAiApiDocumentation) {
+      root.EdenAiApiDocumentation = {};
     }
+    root.EdenAiApiDocumentation.AutoMLTextDataApi = factory(root.EdenAiApiDocumentation.ApiClient);
+  }
+}(this, function(ApiClient) {
+  'use strict';
+
+  /**
+   * AutoMLTextData service.
+   * @module edenai/api/AutoMLTextDataApi
+   * @version v1
+   */
+
+  /**
+   * Constructs a new AutoMLTextDataApi. 
+   * @alias module:edenai/api/AutoMLTextDataApi
+   * @class
+   * @param {module:edenai/ApiClient} [apiClient] Optional API client implementation to use,
+   * default to {@link module:edenai/ApiClient#instance} if unspecified.
+   */
+  var exports = function(apiClient) {
+    this.apiClient = apiClient || ApiClient.instance;
+
 
     /**
-     * Callback function to receive the result of the autoMLTextDataDelete operation.
-     * @callback moduleedenai/api/AutoMLTextDataApi~autoMLTextDataDeleteCallback
+     * Callback function to receive the result of the automlTextDataDelete operation.
+     * @callback module:edenai/api/AutoMLTextDataApi~automlTextDataDeleteCallback
      * @param {String} error Error message, if any.
      * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
@@ -46,47 +60,50 @@ export class AutoMLTextDataApi {
      * AutoML Text Data Delete
      * @param {String} projectId 
      * @param {String} trainId 
-     * @param {module:edenai/api/AutoMLTextDataApi~autoMLTextDataDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:edenai/api/AutoMLTextDataApi~automlTextDataDeleteCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    autoMLTextDataDelete(projectId, trainId, callback) {
-      
-      let postBody = null;
+    this.automlTextDataDelete = function(projectId, trainId, callback) {
+      var postBody = null;
+
       // verify the required parameter 'projectId' is set
       if (projectId === undefined || projectId === null) {
-        throw new Error("Missing the required parameter 'projectId' when calling autoMLTextDataDelete");
+        throw new Error("Missing the required parameter 'projectId' when calling automlTextDataDelete");
       }
+
       // verify the required parameter 'trainId' is set
       if (trainId === undefined || trainId === null) {
-        throw new Error("Missing the required parameter 'trainId' when calling autoMLTextDataDelete");
+        throw new Error("Missing the required parameter 'trainId' when calling automlTextDataDelete");
       }
 
-      let pathParams = {
-        'project_id': projectId,'train_id': trainId
+
+      var pathParams = {
+        'project_id': projectId,
+        'train_id': trainId
       };
-      let queryParams = {
-        
+      var queryParams = {
       };
-      let headerParams = {
-        
+      var collectionQueryParams = {
       };
-      let formParams = {
-        
+      var headerParams = {
+      };
+      var formParams = {
       };
 
-      let authNames = ['Bearer'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = null;
+      var authNames = ['Bearer'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json'];
+      var returnType = null;
 
       return this.apiClient.callApi(
         '/automl/text/project/{project_id}/train/{train_id}', 'DELETE',
-        pathParams, queryParams, headerParams, formParams, postBody,
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
     }
+
     /**
-     * Callback function to receive the result of the autoMLTextDataLaunchPrediction operation.
-     * @callback moduleedenai/api/AutoMLTextDataApi~autoMLTextDataLaunchPredictionCallback
+     * Callback function to receive the result of the automlTextDataLaunchPrediction operation.
+     * @callback module:edenai/api/AutoMLTextDataApi~automlTextDataLaunchPredictionCallback
      * @param {String} error Error message, if any.
      * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
@@ -94,54 +111,59 @@ export class AutoMLTextDataApi {
 
     /**
      *   **SUPPORTED FILES**  The API takes a csv file with no header and only one column, where each line contains a document to classify.  
-     * @param {Blob} files 
      * @param {String} projectId 
      * @param {String} trainId 
-     * @param {module:edenai/api/AutoMLTextDataApi~autoMLTextDataLaunchPredictionCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {File} files 
+     * @param {module:edenai/api/AutoMLTextDataApi~automlTextDataLaunchPredictionCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    autoMLTextDataLaunchPrediction(files, projectId, trainId, callback) {
-      
-      let postBody = null;
-      // verify the required parameter 'files' is set
-      if (files === undefined || files === null) {
-        throw new Error("Missing the required parameter 'files' when calling autoMLTextDataLaunchPrediction");
-      }
+    this.automlTextDataLaunchPrediction = function(projectId, trainId, files, callback) {
+      var postBody = null;
+
       // verify the required parameter 'projectId' is set
       if (projectId === undefined || projectId === null) {
-        throw new Error("Missing the required parameter 'projectId' when calling autoMLTextDataLaunchPrediction");
-      }
-      // verify the required parameter 'trainId' is set
-      if (trainId === undefined || trainId === null) {
-        throw new Error("Missing the required parameter 'trainId' when calling autoMLTextDataLaunchPrediction");
+        throw new Error("Missing the required parameter 'projectId' when calling automlTextDataLaunchPrediction");
       }
 
-      let pathParams = {
-        'project_id': projectId,'train_id': trainId
+      // verify the required parameter 'trainId' is set
+      if (trainId === undefined || trainId === null) {
+        throw new Error("Missing the required parameter 'trainId' when calling automlTextDataLaunchPrediction");
+      }
+
+      // verify the required parameter 'files' is set
+      if (files === undefined || files === null) {
+        throw new Error("Missing the required parameter 'files' when calling automlTextDataLaunchPrediction");
+      }
+
+
+      var pathParams = {
+        'project_id': projectId,
+        'train_id': trainId
       };
-      let queryParams = {
-        
+      var queryParams = {
       };
-      let headerParams = {
-        
+      var collectionQueryParams = {
       };
-      let formParams = {
+      var headerParams = {
+      };
+      var formParams = {
         'files': files
       };
 
-      let authNames = ['Bearer'];
-      let contentTypes = ['multipart/form-data'];
-      let accepts = ['application/json'];
-      let returnType = null;
+      var authNames = ['Bearer'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json'];
+      var returnType = null;
 
       return this.apiClient.callApi(
         '/automl/text/project/{project_id}/train/{train_id}/prediction', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
     }
+
     /**
-     * Callback function to receive the result of the autoMLTextDataPredictionDetail operation.
-     * @callback moduleedenai/api/AutoMLTextDataApi~autoMLTextDataPredictionDetailCallback
+     * Callback function to receive the result of the automlTextDataPredictionDetail operation.
+     * @callback module:edenai/api/AutoMLTextDataApi~automlTextDataPredictionDetailCallback
      * @param {String} error Error message, if any.
      * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
@@ -152,51 +174,56 @@ export class AutoMLTextDataApi {
      * @param {String} predictId 
      * @param {String} projectId 
      * @param {String} trainId 
-     * @param {module:edenai/api/AutoMLTextDataApi~autoMLTextDataPredictionDetailCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:edenai/api/AutoMLTextDataApi~automlTextDataPredictionDetailCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    autoMLTextDataPredictionDetail(predictId, projectId, trainId, callback) {
-      
-      let postBody = null;
+    this.automlTextDataPredictionDetail = function(predictId, projectId, trainId, callback) {
+      var postBody = null;
+
       // verify the required parameter 'predictId' is set
       if (predictId === undefined || predictId === null) {
-        throw new Error("Missing the required parameter 'predictId' when calling autoMLTextDataPredictionDetail");
+        throw new Error("Missing the required parameter 'predictId' when calling automlTextDataPredictionDetail");
       }
+
       // verify the required parameter 'projectId' is set
       if (projectId === undefined || projectId === null) {
-        throw new Error("Missing the required parameter 'projectId' when calling autoMLTextDataPredictionDetail");
+        throw new Error("Missing the required parameter 'projectId' when calling automlTextDataPredictionDetail");
       }
+
       // verify the required parameter 'trainId' is set
       if (trainId === undefined || trainId === null) {
-        throw new Error("Missing the required parameter 'trainId' when calling autoMLTextDataPredictionDetail");
+        throw new Error("Missing the required parameter 'trainId' when calling automlTextDataPredictionDetail");
       }
 
-      let pathParams = {
-        'predict_id': predictId,'project_id': projectId,'train_id': trainId
+
+      var pathParams = {
+        'predict_id': predictId,
+        'project_id': projectId,
+        'train_id': trainId
       };
-      let queryParams = {
-        
+      var queryParams = {
       };
-      let headerParams = {
-        
+      var collectionQueryParams = {
       };
-      let formParams = {
-        
+      var headerParams = {
+      };
+      var formParams = {
       };
 
-      let authNames = ['Bearer'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = null;
+      var authNames = ['Bearer'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json'];
+      var returnType = null;
 
       return this.apiClient.callApi(
         '/automl/text/project/{project_id}/train/{train_id}/prediction/{predict_id}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
     }
+
     /**
-     * Callback function to receive the result of the autoMLTextDataPredictionResults operation.
-     * @callback moduleedenai/api/AutoMLTextDataApi~autoMLTextDataPredictionResultsCallback
+     * Callback function to receive the result of the automlTextDataPredictionResults operation.
+     * @callback module:edenai/api/AutoMLTextDataApi~automlTextDataPredictionResultsCallback
      * @param {String} error Error message, if any.
      * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
@@ -207,106 +234,116 @@ export class AutoMLTextDataApi {
      * @param {String} predictId 
      * @param {String} projectId 
      * @param {String} trainId 
-     * @param {module:edenai/api/AutoMLTextDataApi~autoMLTextDataPredictionResultsCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:edenai/api/AutoMLTextDataApi~automlTextDataPredictionResultsCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    autoMLTextDataPredictionResults(predictId, projectId, trainId, callback) {
-      
-      let postBody = null;
+    this.automlTextDataPredictionResults = function(predictId, projectId, trainId, callback) {
+      var postBody = null;
+
       // verify the required parameter 'predictId' is set
       if (predictId === undefined || predictId === null) {
-        throw new Error("Missing the required parameter 'predictId' when calling autoMLTextDataPredictionResults");
+        throw new Error("Missing the required parameter 'predictId' when calling automlTextDataPredictionResults");
       }
+
       // verify the required parameter 'projectId' is set
       if (projectId === undefined || projectId === null) {
-        throw new Error("Missing the required parameter 'projectId' when calling autoMLTextDataPredictionResults");
+        throw new Error("Missing the required parameter 'projectId' when calling automlTextDataPredictionResults");
       }
+
       // verify the required parameter 'trainId' is set
       if (trainId === undefined || trainId === null) {
-        throw new Error("Missing the required parameter 'trainId' when calling autoMLTextDataPredictionResults");
+        throw new Error("Missing the required parameter 'trainId' when calling automlTextDataPredictionResults");
       }
 
-      let pathParams = {
-        'predict_id': predictId,'project_id': projectId,'train_id': trainId
+
+      var pathParams = {
+        'predict_id': predictId,
+        'project_id': projectId,
+        'train_id': trainId
       };
-      let queryParams = {
-        
+      var queryParams = {
       };
-      let headerParams = {
-        
+      var collectionQueryParams = {
       };
-      let formParams = {
-        
+      var headerParams = {
+      };
+      var formParams = {
       };
 
-      let authNames = ['Bearer'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = null;
+      var authNames = ['Bearer'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json'];
+      var returnType = null;
 
       return this.apiClient.callApi(
         '/automl/text/project/{project_id}/train/{train_id}/prediction/{predict_id}/results', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
     }
+
     /**
-     * Callback function to receive the result of the autoMLTextDataTrain operation.
-     * @callback moduleedenai/api/AutoMLTextDataApi~autoMLTextDataTrainCallback
+     * Callback function to receive the result of the automlTextDataTrain operation.
+     * @callback module:edenai/api/AutoMLTextDataApi~automlTextDataTrainCallback
      * @param {String} error Error message, if any.
      * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     *   **AVAILABLE PROVIDERS**  |Name|Value| |-------------------------------|---------------| |[**Google Cloud Services**](https://www.edenai.co/catalog/google-cloud-natural-language)|&#x60;google&#x60;| |[**Amazon Web Services**](https://www.edenai.co/catalog/amazon-comprehend)|&#x60;amazon&#x60;|  
+     *   **AVAILABLE PROVIDERS**  |Name|Value| |-------------------------------|---------------| |[**Google Cloud Services**](https://www.edenai.co/catalog/google-cloud-natural-language)|`google`| |[**Amazon Web Services**](https://www.edenai.co/catalog/amazon-comprehend)|`amazon`|  
+     * @param {String} projectId 
      * @param {String} provider 
      * @param {String} trainingName 
-     * @param {String} projectId 
-     * @param {module:edenai/api/AutoMLTextDataApi~autoMLTextDataTrainCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:edenai/api/AutoMLTextDataApi~automlTextDataTrainCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    autoMLTextDataTrain(provider, trainingName, projectId, callback) {
-      
-      let postBody = null;
-      // verify the required parameter 'provider' is set
-      if (provider === undefined || provider === null) {
-        throw new Error("Missing the required parameter 'provider' when calling autoMLTextDataTrain");
-      }
-      // verify the required parameter 'trainingName' is set
-      if (trainingName === undefined || trainingName === null) {
-        throw new Error("Missing the required parameter 'trainingName' when calling autoMLTextDataTrain");
-      }
+    this.automlTextDataTrain = function(projectId, provider, trainingName, callback) {
+      var postBody = null;
+
       // verify the required parameter 'projectId' is set
       if (projectId === undefined || projectId === null) {
-        throw new Error("Missing the required parameter 'projectId' when calling autoMLTextDataTrain");
+        throw new Error("Missing the required parameter 'projectId' when calling automlTextDataTrain");
       }
 
-      let pathParams = {
+      // verify the required parameter 'provider' is set
+      if (provider === undefined || provider === null) {
+        throw new Error("Missing the required parameter 'provider' when calling automlTextDataTrain");
+      }
+
+      // verify the required parameter 'trainingName' is set
+      if (trainingName === undefined || trainingName === null) {
+        throw new Error("Missing the required parameter 'trainingName' when calling automlTextDataTrain");
+      }
+
+
+      var pathParams = {
         'project_id': projectId
       };
-      let queryParams = {
-        
+      var queryParams = {
       };
-      let headerParams = {
-        
+      var collectionQueryParams = {
       };
-      let formParams = {
-        'provider': provider,'training_name': trainingName
+      var headerParams = {
+      };
+      var formParams = {
+        'provider': provider,
+        'training_name': trainingName
       };
 
-      let authNames = ['Bearer'];
-      let contentTypes = ['multipart/form-data'];
-      let accepts = ['application/json'];
-      let returnType = null;
+      var authNames = ['Bearer'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json'];
+      var returnType = null;
 
       return this.apiClient.callApi(
         '/automl/text/project/{project_id}/train', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
     }
+
     /**
-     * Callback function to receive the result of the autoMLTextDataTrainDetail operation.
-     * @callback moduleedenai/api/AutoMLTextDataApi~autoMLTextDataTrainDetailCallback
+     * Callback function to receive the result of the automlTextDataTrainDetail operation.
+     * @callback module:edenai/api/AutoMLTextDataApi~automlTextDataTrainDetailCallback
      * @param {String} error Error message, if any.
      * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
@@ -316,112 +353,124 @@ export class AutoMLTextDataApi {
      * AutoML Text Data Train Detail
      * @param {String} projectId 
      * @param {String} trainId 
-     * @param {module:edenai/api/AutoMLTextDataApi~autoMLTextDataTrainDetailCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:edenai/api/AutoMLTextDataApi~automlTextDataTrainDetailCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    autoMLTextDataTrainDetail(projectId, trainId, callback) {
-      
-      let postBody = null;
+    this.automlTextDataTrainDetail = function(projectId, trainId, callback) {
+      var postBody = null;
+
       // verify the required parameter 'projectId' is set
       if (projectId === undefined || projectId === null) {
-        throw new Error("Missing the required parameter 'projectId' when calling autoMLTextDataTrainDetail");
+        throw new Error("Missing the required parameter 'projectId' when calling automlTextDataTrainDetail");
       }
+
       // verify the required parameter 'trainId' is set
       if (trainId === undefined || trainId === null) {
-        throw new Error("Missing the required parameter 'trainId' when calling autoMLTextDataTrainDetail");
+        throw new Error("Missing the required parameter 'trainId' when calling automlTextDataTrainDetail");
       }
 
-      let pathParams = {
-        'project_id': projectId,'train_id': trainId
+
+      var pathParams = {
+        'project_id': projectId,
+        'train_id': trainId
       };
-      let queryParams = {
-        
+      var queryParams = {
       };
-      let headerParams = {
-        
+      var collectionQueryParams = {
       };
-      let formParams = {
-        
+      var headerParams = {
+      };
+      var formParams = {
       };
 
-      let authNames = ['Bearer'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = null;
+      var authNames = ['Bearer'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json'];
+      var returnType = null;
 
       return this.apiClient.callApi(
         '/automl/text/project/{project_id}/train/{train_id}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
     }
+
     /**
-     * Callback function to receive the result of the autoMLTextProjectCreate operation.
-     * @callback moduleedenai/api/AutoMLTextDataApi~autoMLTextProjectCreateCallback
+     * Callback function to receive the result of the automlTextProjectCreate operation.
+     * @callback module:edenai/api/AutoMLTextDataApi~automlTextProjectCreateCallback
      * @param {String} error Error message, if any.
      * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     *   **SUPPORTED FILES**  The API takes csv files separated using &#x27;,&#x27;. The csv must contain a header and exactly two columns, named &#x60;docs&#x60; and &#x60;labels&#x60; In case a document might have several labels, please separate your labels using &#x27;|&#x27;     **SUPPORTED LANGUAGE**  |Name|Type|Value| |---------------------------|-------------------------------|---------------| | **English (US)**|*&#x60;string&#x60;*|&#x60;en&#x60;| | **French**      |*&#x60;string&#x60;*|&#x60;fr&#x60;| | **German**      |*&#x60;string&#x60;*|&#x60;de&#x60;| | **Italian**     |*&#x60;string&#x60;*|&#x60;it&#x60;| | **Portuguese**  |*&#x60;string&#x60;*|&#x60;pt&#x60;| | **Arabic**      |*&#x60;string&#x60;*|&#x60;ar&#x60;| | **Chinese-Simplified**|*&#x60;string&#x60;*|&#x60;zh&#x60;| | **Chinese-Traditional**|*&#x60;string&#x60;*|&#x60;zh-TW&#x60;| | **Korean**      |*&#x60;string&#x60;*|&#x60;ko&#x60;| | **Japanese**    |*&#x60;string&#x60;*|&#x60;ja&#x60;| | **Hindi**       |*&#x60;string&#x60;*|&#x60;hi&#x60;| | **Spanish**     |*&#x60;string&#x60;*|&#x60;es&#x60;|    **AVAILABLE CLASSIFICATION TYPES**  |Type|Value|Description| |---------------------------|-------------------------------|---------------| | **Single Label Classification **|&#x60;single_label_classification&#x60;|Each document belongs to one category (label)| | **Multi Label Classification**|&#x60;multi_label_classification&#x60;|Documents might have several labels|  
+     *   **SUPPORTED FILES**  The API takes csv files separated using ','. The csv must contain a header and exactly two columns, named `docs` and `labels` In case a document might have several labels, please separate your labels using '|'     **SUPPORTED LANGUAGE**  |Name|Type|Value| |---------------------------|-------------------------------|---------------| | **English (US)**|*`string`*|`en`| | **French**      |*`string`*|`fr`| | **German**      |*`string`*|`de`| | **Italian**     |*`string`*|`it`| | **Portuguese**  |*`string`*|`pt`| | **Arabic**      |*`string`*|`ar`| | **Chinese-Simplified**|*`string`*|`zh`| | **Chinese-Traditional**|*`string`*|`zh-TW`| | **Korean**      |*`string`*|`ko`| | **Japanese**    |*`string`*|`ja`| | **Hindi**       |*`string`*|`hi`| | **Spanish**     |*`string`*|`es`|    **AVAILABLE CLASSIFICATION TYPES**  |Type|Value|Description| |---------------------------|-------------------------------|---------------| | **Single Label Classification**|`single_label_classification`|Each document belongs to one category (label)| | **Multi Label Classification**|`multi_label_classification`|Documents might have several labels|  
      * @param {String} projectName 
      * @param {String} projectDescription 
-     * @param {Blob} files 
+     * @param {File} files 
      * @param {String} type 
      * @param {String} language 
-     * @param {module:edenai/api/AutoMLTextDataApi~autoMLTextProjectCreateCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:edenai/api/AutoMLTextDataApi~automlTextProjectCreateCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    autoMLTextProjectCreate(projectName, projectDescription, files, type, language, callback) {
-      
-      let postBody = null;
+    this.automlTextProjectCreate = function(projectName, projectDescription, files, type, language, callback) {
+      var postBody = null;
+
       // verify the required parameter 'projectName' is set
       if (projectName === undefined || projectName === null) {
-        throw new Error("Missing the required parameter 'projectName' when calling autoMLTextProjectCreate");
+        throw new Error("Missing the required parameter 'projectName' when calling automlTextProjectCreate");
       }
+
       // verify the required parameter 'projectDescription' is set
       if (projectDescription === undefined || projectDescription === null) {
-        throw new Error("Missing the required parameter 'projectDescription' when calling autoMLTextProjectCreate");
+        throw new Error("Missing the required parameter 'projectDescription' when calling automlTextProjectCreate");
       }
+
       // verify the required parameter 'files' is set
       if (files === undefined || files === null) {
-        throw new Error("Missing the required parameter 'files' when calling autoMLTextProjectCreate");
+        throw new Error("Missing the required parameter 'files' when calling automlTextProjectCreate");
       }
+
       // verify the required parameter 'type' is set
       if (type === undefined || type === null) {
-        throw new Error("Missing the required parameter 'type' when calling autoMLTextProjectCreate");
+        throw new Error("Missing the required parameter 'type' when calling automlTextProjectCreate");
       }
+
       // verify the required parameter 'language' is set
       if (language === undefined || language === null) {
-        throw new Error("Missing the required parameter 'language' when calling autoMLTextProjectCreate");
+        throw new Error("Missing the required parameter 'language' when calling automlTextProjectCreate");
       }
 
-      let pathParams = {
-        
+
+      var pathParams = {
       };
-      let queryParams = {
-        
+      var queryParams = {
       };
-      let headerParams = {
-        
+      var collectionQueryParams = {
       };
-      let formParams = {
-        'project_name': projectName,'project_description': projectDescription,'files': files,'type': type,'language': language
+      var headerParams = {
+      };
+      var formParams = {
+        'project_name': projectName,
+        'project_description': projectDescription,
+        'files': files,
+        'type': type,
+        'language': language
       };
 
-      let authNames = ['Bearer'];
-      let contentTypes = ['multipart/form-data'];
-      let accepts = ['application/json'];
-      let returnType = null;
+      var authNames = ['Bearer'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json'];
+      var returnType = null;
 
       return this.apiClient.callApi(
         '/automl/text/project', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
     }
+
     /**
-     * Callback function to receive the result of the autoMLTextProjectDelete operation.
-     * @callback moduleedenai/api/AutoMLTextDataApi~autoMLTextProjectDeleteCallback
+     * Callback function to receive the result of the automlTextProjectDelete operation.
+     * @callback module:edenai/api/AutoMLTextDataApi~automlTextProjectDeleteCallback
      * @param {String} error Error message, if any.
      * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
@@ -430,43 +479,44 @@ export class AutoMLTextDataApi {
     /**
      * AutoML Text Project Delete
      * @param {String} projectId 
-     * @param {module:edenai/api/AutoMLTextDataApi~autoMLTextProjectDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:edenai/api/AutoMLTextDataApi~automlTextProjectDeleteCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    autoMLTextProjectDelete(projectId, callback) {
-      
-      let postBody = null;
+    this.automlTextProjectDelete = function(projectId, callback) {
+      var postBody = null;
+
       // verify the required parameter 'projectId' is set
       if (projectId === undefined || projectId === null) {
-        throw new Error("Missing the required parameter 'projectId' when calling autoMLTextProjectDelete");
+        throw new Error("Missing the required parameter 'projectId' when calling automlTextProjectDelete");
       }
 
-      let pathParams = {
+
+      var pathParams = {
         'project_id': projectId
       };
-      let queryParams = {
-        
+      var queryParams = {
       };
-      let headerParams = {
-        
+      var collectionQueryParams = {
       };
-      let formParams = {
-        
+      var headerParams = {
+      };
+      var formParams = {
       };
 
-      let authNames = ['Bearer'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = null;
+      var authNames = ['Bearer'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json'];
+      var returnType = null;
 
       return this.apiClient.callApi(
         '/automl/text/project/{project_id}', 'DELETE',
-        pathParams, queryParams, headerParams, formParams, postBody,
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
     }
+
     /**
-     * Callback function to receive the result of the autoMLTextProjectDetail operation.
-     * @callback moduleedenai/api/AutoMLTextDataApi~autoMLTextProjectDetailCallback
+     * Callback function to receive the result of the automlTextProjectDetail operation.
+     * @callback module:edenai/api/AutoMLTextDataApi~automlTextProjectDetailCallback
      * @param {String} error Error message, if any.
      * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
@@ -475,43 +525,44 @@ export class AutoMLTextDataApi {
     /**
      * AutoML Text Project Detail
      * @param {String} projectId 
-     * @param {module:edenai/api/AutoMLTextDataApi~autoMLTextProjectDetailCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:edenai/api/AutoMLTextDataApi~automlTextProjectDetailCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    autoMLTextProjectDetail(projectId, callback) {
-      
-      let postBody = null;
+    this.automlTextProjectDetail = function(projectId, callback) {
+      var postBody = null;
+
       // verify the required parameter 'projectId' is set
       if (projectId === undefined || projectId === null) {
-        throw new Error("Missing the required parameter 'projectId' when calling autoMLTextProjectDetail");
+        throw new Error("Missing the required parameter 'projectId' when calling automlTextProjectDetail");
       }
 
-      let pathParams = {
+
+      var pathParams = {
         'project_id': projectId
       };
-      let queryParams = {
-        
+      var queryParams = {
       };
-      let headerParams = {
-        
+      var collectionQueryParams = {
       };
-      let formParams = {
-        
+      var headerParams = {
+      };
+      var formParams = {
       };
 
-      let authNames = ['Bearer'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = null;
+      var authNames = ['Bearer'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json'];
+      var returnType = null;
 
       return this.apiClient.callApi(
         '/automl/text/project/{project_id}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
     }
+
     /**
-     * Callback function to receive the result of the autoMLTextProjectList operation.
-     * @callback moduleedenai/api/AutoMLTextDataApi~autoMLTextProjectListCallback
+     * Callback function to receive the result of the automlTextProjectList operation.
+     * @callback module:edenai/api/AutoMLTextDataApi~automlTextProjectListCallback
      * @param {String} error Error message, if any.
      * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
@@ -519,39 +570,38 @@ export class AutoMLTextDataApi {
 
     /**
      * AutoML Text Project List
-     * @param {module:edenai/api/AutoMLTextDataApi~autoMLTextProjectListCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:edenai/api/AutoMLTextDataApi~automlTextProjectListCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    autoMLTextProjectList(callback) {
-      
-      let postBody = null;
+    this.automlTextProjectList = function(callback) {
+      var postBody = null;
 
-      let pathParams = {
-        
+
+      var pathParams = {
       };
-      let queryParams = {
-        
+      var queryParams = {
       };
-      let headerParams = {
-        
+      var collectionQueryParams = {
       };
-      let formParams = {
-        
+      var headerParams = {
+      };
+      var formParams = {
       };
 
-      let authNames = ['Bearer'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = null;
+      var authNames = ['Bearer'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json'];
+      var returnType = null;
 
       return this.apiClient.callApi(
         '/automl/text/project', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
     }
+
     /**
-     * Callback function to receive the result of the autoMLTextProjectUpdate operation.
-     * @callback moduleedenai/api/AutoMLTextDataApi~autoMLTextProjectUpdateCallback
+     * Callback function to receive the result of the automlTextProjectUpdate operation.
+     * @callback module:edenai/api/AutoMLTextDataApi~automlTextProjectUpdateCallback
      * @param {String} error Error message, if any.
      * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
@@ -559,60 +609,70 @@ export class AutoMLTextDataApi {
 
     /**
      * AutoML Text Project Update
+     * @param {String} projectId 
      * @param {String} projectName 
      * @param {String} projectDescription 
      * @param {String} type 
      * @param {String} language 
-     * @param {String} projectId 
-     * @param {module:edenai/api/AutoMLTextDataApi~autoMLTextProjectUpdateCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:edenai/api/AutoMLTextDataApi~automlTextProjectUpdateCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    autoMLTextProjectUpdate(projectName, projectDescription, type, language, projectId, callback) {
-      
-      let postBody = null;
-      // verify the required parameter 'projectName' is set
-      if (projectName === undefined || projectName === null) {
-        throw new Error("Missing the required parameter 'projectName' when calling autoMLTextProjectUpdate");
-      }
-      // verify the required parameter 'projectDescription' is set
-      if (projectDescription === undefined || projectDescription === null) {
-        throw new Error("Missing the required parameter 'projectDescription' when calling autoMLTextProjectUpdate");
-      }
-      // verify the required parameter 'type' is set
-      if (type === undefined || type === null) {
-        throw new Error("Missing the required parameter 'type' when calling autoMLTextProjectUpdate");
-      }
-      // verify the required parameter 'language' is set
-      if (language === undefined || language === null) {
-        throw new Error("Missing the required parameter 'language' when calling autoMLTextProjectUpdate");
-      }
+    this.automlTextProjectUpdate = function(projectId, projectName, projectDescription, type, language, callback) {
+      var postBody = null;
+
       // verify the required parameter 'projectId' is set
       if (projectId === undefined || projectId === null) {
-        throw new Error("Missing the required parameter 'projectId' when calling autoMLTextProjectUpdate");
+        throw new Error("Missing the required parameter 'projectId' when calling automlTextProjectUpdate");
       }
 
-      let pathParams = {
+      // verify the required parameter 'projectName' is set
+      if (projectName === undefined || projectName === null) {
+        throw new Error("Missing the required parameter 'projectName' when calling automlTextProjectUpdate");
+      }
+
+      // verify the required parameter 'projectDescription' is set
+      if (projectDescription === undefined || projectDescription === null) {
+        throw new Error("Missing the required parameter 'projectDescription' when calling automlTextProjectUpdate");
+      }
+
+      // verify the required parameter 'type' is set
+      if (type === undefined || type === null) {
+        throw new Error("Missing the required parameter 'type' when calling automlTextProjectUpdate");
+      }
+
+      // verify the required parameter 'language' is set
+      if (language === undefined || language === null) {
+        throw new Error("Missing the required parameter 'language' when calling automlTextProjectUpdate");
+      }
+
+
+      var pathParams = {
         'project_id': projectId
       };
-      let queryParams = {
-        
+      var queryParams = {
       };
-      let headerParams = {
-        
+      var collectionQueryParams = {
       };
-      let formParams = {
-        'project_name': projectName,'project_description': projectDescription,'type': type,'language': language
+      var headerParams = {
+      };
+      var formParams = {
+        'project_name': projectName,
+        'project_description': projectDescription,
+        'type': type,
+        'language': language
       };
 
-      let authNames = ['Bearer'];
-      let contentTypes = ['multipart/form-data'];
-      let accepts = ['application/json'];
-      let returnType = null;
+      var authNames = ['Bearer'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json'];
+      var returnType = null;
 
       return this.apiClient.callApi(
         '/automl/text/project/{project_id}', 'PUT',
-        pathParams, queryParams, headerParams, formParams, postBody,
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
     }
+  };
 
-}
+  return exports;
+}));

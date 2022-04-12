@@ -1,14 +1,15 @@
 # EdenAiApiDocumentation.EdenAIToolsApi
 
-All URIs are relative to *//https://api.edenai.run/v1/*
+All URIs are relative to *https://api.edenai.run/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**search**](EdenAIToolsApi.md#search) | **POST** /tools/search | 
 
+
 <a name="search"></a>
 # **search**
-> InlineResponse20012 search(text, words, text, words)
+> InlineResponse20014 search(text, words)
 
 
 
@@ -16,42 +17,42 @@ This is an easy tool to lookup for a list of words in a given text
 
 ### Example
 ```javascript
-import {EdenAiApiDocumentation} from 'eden_ai_api_documentation';
-let defaultClient = EdenAiApiDocumentation.ApiClient.instance;
+var EdenAiApiDocumentation = require('eden_ai_api_documentation');
+var defaultClient = EdenAiApiDocumentation.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-let Bearer = defaultClient.authentications['Bearer'];
+var Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdenAiApiDocumentation.EdenAIToolsApi();
-let text = "text_example"; // String | 
-let words = "words_example"; // String | 
-let text = "text_example"; // String | 
-let words = "words_example"; // String | 
+var apiInstance = new EdenAiApiDocumentation.EdenAIToolsApi();
 
-apiInstance.search(text, words, text, words, (error, data, response) => {
+var text = "text_example"; // String | Text to analyze
+
+var words = "words_example"; // String | (ex: [ 'Happy', 'New', 'Year'])
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.search(text, words, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **text** | **String**|  | 
- **words** | **String**|  | 
- **text** | **String**|  | 
- **words** | **String**|  | 
+ **text** | **String**| Text to analyze | 
+ **words** | **String**| (ex: [ 'Happy', 'New', 'Year']) | 
 
 ### Return type
 
-[**InlineResponse20012**](InlineResponse20012.md)
+[**InlineResponse20014**](InlineResponse20014.md)
 
 ### Authorization
 
@@ -59,6 +60,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded, multipart/form-data
+ - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json
 

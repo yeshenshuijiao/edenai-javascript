@@ -1,24 +1,25 @@
 # EdenAiApiDocumentation.AutoMLTextDataApi
 
-All URIs are relative to *//https://api.edenai.run/v1/*
+All URIs are relative to *https://api.edenai.run/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**autoMLTextDataDelete**](AutoMLTextDataApi.md#autoMLTextDataDelete) | **DELETE** /automl/text/project/{project_id}/train/{train_id} | 
-[**autoMLTextDataLaunchPrediction**](AutoMLTextDataApi.md#autoMLTextDataLaunchPrediction) | **POST** /automl/text/project/{project_id}/train/{train_id}/prediction | 
-[**autoMLTextDataPredictionDetail**](AutoMLTextDataApi.md#autoMLTextDataPredictionDetail) | **GET** /automl/text/project/{project_id}/train/{train_id}/prediction/{predict_id} | 
-[**autoMLTextDataPredictionResults**](AutoMLTextDataApi.md#autoMLTextDataPredictionResults) | **GET** /automl/text/project/{project_id}/train/{train_id}/prediction/{predict_id}/results | 
-[**autoMLTextDataTrain**](AutoMLTextDataApi.md#autoMLTextDataTrain) | **POST** /automl/text/project/{project_id}/train | 
-[**autoMLTextDataTrainDetail**](AutoMLTextDataApi.md#autoMLTextDataTrainDetail) | **GET** /automl/text/project/{project_id}/train/{train_id} | 
-[**autoMLTextProjectCreate**](AutoMLTextDataApi.md#autoMLTextProjectCreate) | **POST** /automl/text/project | 
-[**autoMLTextProjectDelete**](AutoMLTextDataApi.md#autoMLTextProjectDelete) | **DELETE** /automl/text/project/{project_id} | 
-[**autoMLTextProjectDetail**](AutoMLTextDataApi.md#autoMLTextProjectDetail) | **GET** /automl/text/project/{project_id} | 
-[**autoMLTextProjectList**](AutoMLTextDataApi.md#autoMLTextProjectList) | **GET** /automl/text/project | 
-[**autoMLTextProjectUpdate**](AutoMLTextDataApi.md#autoMLTextProjectUpdate) | **PUT** /automl/text/project/{project_id} | 
+[**automlTextDataDelete**](AutoMLTextDataApi.md#automlTextDataDelete) | **DELETE** /automl/text/project/{project_id}/train/{train_id} | 
+[**automlTextDataLaunchPrediction**](AutoMLTextDataApi.md#automlTextDataLaunchPrediction) | **POST** /automl/text/project/{project_id}/train/{train_id}/prediction | 
+[**automlTextDataPredictionDetail**](AutoMLTextDataApi.md#automlTextDataPredictionDetail) | **GET** /automl/text/project/{project_id}/train/{train_id}/prediction/{predict_id} | 
+[**automlTextDataPredictionResults**](AutoMLTextDataApi.md#automlTextDataPredictionResults) | **GET** /automl/text/project/{project_id}/train/{train_id}/prediction/{predict_id}/results | 
+[**automlTextDataTrain**](AutoMLTextDataApi.md#automlTextDataTrain) | **POST** /automl/text/project/{project_id}/train | 
+[**automlTextDataTrainDetail**](AutoMLTextDataApi.md#automlTextDataTrainDetail) | **GET** /automl/text/project/{project_id}/train/{train_id} | 
+[**automlTextProjectCreate**](AutoMLTextDataApi.md#automlTextProjectCreate) | **POST** /automl/text/project | 
+[**automlTextProjectDelete**](AutoMLTextDataApi.md#automlTextProjectDelete) | **DELETE** /automl/text/project/{project_id} | 
+[**automlTextProjectDetail**](AutoMLTextDataApi.md#automlTextProjectDetail) | **GET** /automl/text/project/{project_id} | 
+[**automlTextProjectList**](AutoMLTextDataApi.md#automlTextProjectList) | **GET** /automl/text/project | 
+[**automlTextProjectUpdate**](AutoMLTextDataApi.md#automlTextProjectUpdate) | **PUT** /automl/text/project/{project_id} | 
 
-<a name="autoMLTextDataDelete"></a>
-# **autoMLTextDataDelete**
-> autoMLTextDataDelete(projectId, trainId)
+
+<a name="automlTextDataDelete"></a>
+# **automlTextDataDelete**
+> automlTextDataDelete(projectId, trainId)
 
 
 
@@ -26,86 +27,36 @@ AutoML Text Data Delete
 
 ### Example
 ```javascript
-import {EdenAiApiDocumentation} from 'eden_ai_api_documentation';
-let defaultClient = EdenAiApiDocumentation.ApiClient.instance;
+var EdenAiApiDocumentation = require('eden_ai_api_documentation');
+var defaultClient = EdenAiApiDocumentation.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-let Bearer = defaultClient.authentications['Bearer'];
+var Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdenAiApiDocumentation.AutoMLTextDataApi();
-let projectId = "projectId_example"; // String | 
-let trainId = "trainId_example"; // String | 
+var apiInstance = new EdenAiApiDocumentation.AutoMLTextDataApi();
 
-apiInstance.autoMLTextDataDelete(projectId, trainId, (error, data, response) => {
+var projectId = "projectId_example"; // String | 
+
+var trainId = "trainId_example"; // String | 
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-});
+};
+apiInstance.automlTextDataDelete(projectId, trainId, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **projectId** | **String**|  | 
- **trainId** | **String**|  | 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="autoMLTextDataLaunchPrediction"></a>
-# **autoMLTextDataLaunchPrediction**
-> autoMLTextDataLaunchPrediction(files, projectId, trainId)
-
-
-
-  **SUPPORTED FILES**  The API takes a csv file with no header and only one column, where each line contains a document to classify.  
-
-### Example
-```javascript
-import {EdenAiApiDocumentation} from 'eden_ai_api_documentation';
-let defaultClient = EdenAiApiDocumentation.ApiClient.instance;
-
-// Configure API key authorization: Bearer
-let Bearer = defaultClient.authentications['Bearer'];
-Bearer.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Bearer.apiKeyPrefix = 'Token';
-
-let apiInstance = new EdenAiApiDocumentation.AutoMLTextDataApi();
-let files = "files_example"; // Blob | 
-let projectId = "projectId_example"; // String | 
-let trainId = "trainId_example"; // String | 
-
-apiInstance.autoMLTextDataLaunchPrediction(files, projectId, trainId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **files** | **Blob**|  | 
  **projectId** | **String**|  | 
  **trainId** | **String**|  | 
 
@@ -122,9 +73,9 @@ null (empty response body)
  - **Content-Type**: multipart/form-data
  - **Accept**: application/json
 
-<a name="autoMLTextDataPredictionDetail"></a>
-# **autoMLTextDataPredictionDetail**
-> autoMLTextDataPredictionDetail(predictId, projectId, trainId)
+<a name="automlTextDataLaunchPrediction"></a>
+# **automlTextDataLaunchPrediction**
+> automlTextDataLaunchPrediction(projectId, trainId, files)
 
 
 
@@ -132,27 +83,91 @@ null (empty response body)
 
 ### Example
 ```javascript
-import {EdenAiApiDocumentation} from 'eden_ai_api_documentation';
-let defaultClient = EdenAiApiDocumentation.ApiClient.instance;
+var EdenAiApiDocumentation = require('eden_ai_api_documentation');
+var defaultClient = EdenAiApiDocumentation.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-let Bearer = defaultClient.authentications['Bearer'];
+var Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdenAiApiDocumentation.AutoMLTextDataApi();
-let predictId = "predictId_example"; // String | 
-let projectId = "projectId_example"; // String | 
-let trainId = "trainId_example"; // String | 
+var apiInstance = new EdenAiApiDocumentation.AutoMLTextDataApi();
 
-apiInstance.autoMLTextDataPredictionDetail(predictId, projectId, trainId, (error, data, response) => {
+var projectId = "projectId_example"; // String | 
+
+var trainId = "trainId_example"; // String | 
+
+var files = "/path/to/file.txt"; // File | 
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-});
+};
+apiInstance.automlTextDataLaunchPrediction(projectId, trainId, files, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **projectId** | **String**|  | 
+ **trainId** | **String**|  | 
+ **files** | **File**|  | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json
+
+<a name="automlTextDataPredictionDetail"></a>
+# **automlTextDataPredictionDetail**
+> automlTextDataPredictionDetail(predictId, projectId, trainId)
+
+
+
+  **SUPPORTED FILES**  The API takes a csv file with no header and only one column, where each line contains a document to classify.  
+
+### Example
+```javascript
+var EdenAiApiDocumentation = require('eden_ai_api_documentation');
+var defaultClient = EdenAiApiDocumentation.ApiClient.instance;
+
+// Configure API key authorization: Bearer
+var Bearer = defaultClient.authentications['Bearer'];
+Bearer.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer.apiKeyPrefix = 'Token';
+
+var apiInstance = new EdenAiApiDocumentation.AutoMLTextDataApi();
+
+var predictId = "predictId_example"; // String | 
+
+var projectId = "projectId_example"; // String | 
+
+var trainId = "trainId_example"; // String | 
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+};
+apiInstance.automlTextDataPredictionDetail(predictId, projectId, trainId, callback);
 ```
 
 ### Parameters
@@ -173,12 +188,12 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: multipart/form-data
  - **Accept**: application/json
 
-<a name="autoMLTextDataPredictionResults"></a>
-# **autoMLTextDataPredictionResults**
-> autoMLTextDataPredictionResults(predictId, projectId, trainId)
+<a name="automlTextDataPredictionResults"></a>
+# **automlTextDataPredictionResults**
+> automlTextDataPredictionResults(predictId, projectId, trainId)
 
 
 
@@ -186,27 +201,32 @@ null (empty response body)
 
 ### Example
 ```javascript
-import {EdenAiApiDocumentation} from 'eden_ai_api_documentation';
-let defaultClient = EdenAiApiDocumentation.ApiClient.instance;
+var EdenAiApiDocumentation = require('eden_ai_api_documentation');
+var defaultClient = EdenAiApiDocumentation.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-let Bearer = defaultClient.authentications['Bearer'];
+var Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdenAiApiDocumentation.AutoMLTextDataApi();
-let predictId = "predictId_example"; // String | 
-let projectId = "projectId_example"; // String | 
-let trainId = "trainId_example"; // String | 
+var apiInstance = new EdenAiApiDocumentation.AutoMLTextDataApi();
 
-apiInstance.autoMLTextDataPredictionResults(predictId, projectId, trainId, (error, data, response) => {
+var predictId = "predictId_example"; // String | 
+
+var projectId = "projectId_example"; // String | 
+
+var trainId = "trainId_example"; // String | 
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-});
+};
+apiInstance.automlTextDataPredictionResults(predictId, projectId, trainId, callback);
 ```
 
 ### Parameters
@@ -227,49 +247,54 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: multipart/form-data
  - **Accept**: application/json
 
-<a name="autoMLTextDataTrain"></a>
-# **autoMLTextDataTrain**
-> autoMLTextDataTrain(provider, trainingName, projectId)
+<a name="automlTextDataTrain"></a>
+# **automlTextDataTrain**
+> automlTextDataTrain(projectId, provider, trainingName)
 
 
 
-  **AVAILABLE PROVIDERS**  |Name|Value| |-------------------------------|---------------| |[**Google Cloud Services**](https://www.edenai.co/catalog/google-cloud-natural-language)|&#x60;google&#x60;| |[**Amazon Web Services**](https://www.edenai.co/catalog/amazon-comprehend)|&#x60;amazon&#x60;|  
+  **AVAILABLE PROVIDERS**  |Name|Value| |-------------------------------|---------------| |[**Google Cloud Services**](https://www.edenai.co/catalog/google-cloud-natural-language)|`google`| |[**Amazon Web Services**](https://www.edenai.co/catalog/amazon-comprehend)|`amazon`|  
 
 ### Example
 ```javascript
-import {EdenAiApiDocumentation} from 'eden_ai_api_documentation';
-let defaultClient = EdenAiApiDocumentation.ApiClient.instance;
+var EdenAiApiDocumentation = require('eden_ai_api_documentation');
+var defaultClient = EdenAiApiDocumentation.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-let Bearer = defaultClient.authentications['Bearer'];
+var Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdenAiApiDocumentation.AutoMLTextDataApi();
-let provider = "provider_example"; // String | 
-let trainingName = "trainingName_example"; // String | 
-let projectId = "projectId_example"; // String | 
+var apiInstance = new EdenAiApiDocumentation.AutoMLTextDataApi();
 
-apiInstance.autoMLTextDataTrain(provider, trainingName, projectId, (error, data, response) => {
+var projectId = "projectId_example"; // String | 
+
+var provider = "provider_example"; // String | 
+
+var trainingName = "trainingName_example"; // String | 
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-});
+};
+apiInstance.automlTextDataTrain(projectId, provider, trainingName, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **projectId** | **String**|  | 
  **provider** | **String**|  | 
  **trainingName** | **String**|  | 
- **projectId** | **String**|  | 
 
 ### Return type
 
@@ -284,9 +309,9 @@ null (empty response body)
  - **Content-Type**: multipart/form-data
  - **Accept**: application/json
 
-<a name="autoMLTextDataTrainDetail"></a>
-# **autoMLTextDataTrainDetail**
-> autoMLTextDataTrainDetail(projectId, trainId)
+<a name="automlTextDataTrainDetail"></a>
+# **automlTextDataTrainDetail**
+> automlTextDataTrainDetail(projectId, trainId)
 
 
 
@@ -294,26 +319,30 @@ AutoML Text Data Train Detail
 
 ### Example
 ```javascript
-import {EdenAiApiDocumentation} from 'eden_ai_api_documentation';
-let defaultClient = EdenAiApiDocumentation.ApiClient.instance;
+var EdenAiApiDocumentation = require('eden_ai_api_documentation');
+var defaultClient = EdenAiApiDocumentation.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-let Bearer = defaultClient.authentications['Bearer'];
+var Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdenAiApiDocumentation.AutoMLTextDataApi();
-let projectId = "projectId_example"; // String | 
-let trainId = "trainId_example"; // String | 
+var apiInstance = new EdenAiApiDocumentation.AutoMLTextDataApi();
 
-apiInstance.autoMLTextDataTrainDetail(projectId, trainId, (error, data, response) => {
+var projectId = "projectId_example"; // String | 
+
+var trainId = "trainId_example"; // String | 
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-});
+};
+apiInstance.automlTextDataTrainDetail(projectId, trainId, callback);
 ```
 
 ### Parameters
@@ -333,42 +362,49 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: multipart/form-data
  - **Accept**: application/json
 
-<a name="autoMLTextProjectCreate"></a>
-# **autoMLTextProjectCreate**
-> autoMLTextProjectCreate(projectName, projectDescription, files, type, language)
+<a name="automlTextProjectCreate"></a>
+# **automlTextProjectCreate**
+> automlTextProjectCreate(projectName, projectDescription, files, type, language)
 
 
 
-  **SUPPORTED FILES**  The API takes csv files separated using &#x27;,&#x27;. The csv must contain a header and exactly two columns, named &#x60;docs&#x60; and &#x60;labels&#x60; In case a document might have several labels, please separate your labels using &#x27;|&#x27;     **SUPPORTED LANGUAGE**  |Name|Type|Value| |---------------------------|-------------------------------|---------------| | **English (US)**|*&#x60;string&#x60;*|&#x60;en&#x60;| | **French**      |*&#x60;string&#x60;*|&#x60;fr&#x60;| | **German**      |*&#x60;string&#x60;*|&#x60;de&#x60;| | **Italian**     |*&#x60;string&#x60;*|&#x60;it&#x60;| | **Portuguese**  |*&#x60;string&#x60;*|&#x60;pt&#x60;| | **Arabic**      |*&#x60;string&#x60;*|&#x60;ar&#x60;| | **Chinese-Simplified**|*&#x60;string&#x60;*|&#x60;zh&#x60;| | **Chinese-Traditional**|*&#x60;string&#x60;*|&#x60;zh-TW&#x60;| | **Korean**      |*&#x60;string&#x60;*|&#x60;ko&#x60;| | **Japanese**    |*&#x60;string&#x60;*|&#x60;ja&#x60;| | **Hindi**       |*&#x60;string&#x60;*|&#x60;hi&#x60;| | **Spanish**     |*&#x60;string&#x60;*|&#x60;es&#x60;|    **AVAILABLE CLASSIFICATION TYPES**  |Type|Value|Description| |---------------------------|-------------------------------|---------------| | **Single Label Classification **|&#x60;single_label_classification&#x60;|Each document belongs to one category (label)| | **Multi Label Classification**|&#x60;multi_label_classification&#x60;|Documents might have several labels|  
+  **SUPPORTED FILES**  The API takes csv files separated using ','. The csv must contain a header and exactly two columns, named `docs` and `labels` In case a document might have several labels, please separate your labels using '|'     **SUPPORTED LANGUAGE**  |Name|Type|Value| |---------------------------|-------------------------------|---------------| | **English (US)**|*`string`*|`en`| | **French**      |*`string`*|`fr`| | **German**      |*`string`*|`de`| | **Italian**     |*`string`*|`it`| | **Portuguese**  |*`string`*|`pt`| | **Arabic**      |*`string`*|`ar`| | **Chinese-Simplified**|*`string`*|`zh`| | **Chinese-Traditional**|*`string`*|`zh-TW`| | **Korean**      |*`string`*|`ko`| | **Japanese**    |*`string`*|`ja`| | **Hindi**       |*`string`*|`hi`| | **Spanish**     |*`string`*|`es`|    **AVAILABLE CLASSIFICATION TYPES**  |Type|Value|Description| |---------------------------|-------------------------------|---------------| | **Single Label Classification**|`single_label_classification`|Each document belongs to one category (label)| | **Multi Label Classification**|`multi_label_classification`|Documents might have several labels|  
 
 ### Example
 ```javascript
-import {EdenAiApiDocumentation} from 'eden_ai_api_documentation';
-let defaultClient = EdenAiApiDocumentation.ApiClient.instance;
+var EdenAiApiDocumentation = require('eden_ai_api_documentation');
+var defaultClient = EdenAiApiDocumentation.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-let Bearer = defaultClient.authentications['Bearer'];
+var Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdenAiApiDocumentation.AutoMLTextDataApi();
-let projectName = "projectName_example"; // String | 
-let projectDescription = "projectDescription_example"; // String | 
-let files = "files_example"; // Blob | 
-let type = "type_example"; // String | 
-let language = "language_example"; // String | 
+var apiInstance = new EdenAiApiDocumentation.AutoMLTextDataApi();
 
-apiInstance.autoMLTextProjectCreate(projectName, projectDescription, files, type, language, (error, data, response) => {
+var projectName = "projectName_example"; // String | 
+
+var projectDescription = "projectDescription_example"; // String | 
+
+var files = "/path/to/file.txt"; // File | 
+
+var type = "type_example"; // String | 
+
+var language = "language_example"; // String | 
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-});
+};
+apiInstance.automlTextProjectCreate(projectName, projectDescription, files, type, language, callback);
 ```
 
 ### Parameters
@@ -377,7 +413,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projectName** | **String**|  | 
  **projectDescription** | **String**|  | 
- **files** | **Blob**|  | 
+ **files** | **File**|  | 
  **type** | **String**|  | 
  **language** | **String**|  | 
 
@@ -394,9 +430,9 @@ null (empty response body)
  - **Content-Type**: multipart/form-data
  - **Accept**: application/json
 
-<a name="autoMLTextProjectDelete"></a>
-# **autoMLTextProjectDelete**
-> autoMLTextProjectDelete(projectId)
+<a name="automlTextProjectDelete"></a>
+# **automlTextProjectDelete**
+> automlTextProjectDelete(projectId)
 
 
 
@@ -404,25 +440,28 @@ AutoML Text Project Delete
 
 ### Example
 ```javascript
-import {EdenAiApiDocumentation} from 'eden_ai_api_documentation';
-let defaultClient = EdenAiApiDocumentation.ApiClient.instance;
+var EdenAiApiDocumentation = require('eden_ai_api_documentation');
+var defaultClient = EdenAiApiDocumentation.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-let Bearer = defaultClient.authentications['Bearer'];
+var Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdenAiApiDocumentation.AutoMLTextDataApi();
-let projectId = "projectId_example"; // String | 
+var apiInstance = new EdenAiApiDocumentation.AutoMLTextDataApi();
 
-apiInstance.autoMLTextProjectDelete(projectId, (error, data, response) => {
+var projectId = "projectId_example"; // String | 
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-});
+};
+apiInstance.automlTextProjectDelete(projectId, callback);
 ```
 
 ### Parameters
@@ -441,12 +480,12 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: multipart/form-data
  - **Accept**: application/json
 
-<a name="autoMLTextProjectDetail"></a>
-# **autoMLTextProjectDetail**
-> autoMLTextProjectDetail(projectId)
+<a name="automlTextProjectDetail"></a>
+# **automlTextProjectDetail**
+> automlTextProjectDetail(projectId)
 
 
 
@@ -454,25 +493,28 @@ AutoML Text Project Detail
 
 ### Example
 ```javascript
-import {EdenAiApiDocumentation} from 'eden_ai_api_documentation';
-let defaultClient = EdenAiApiDocumentation.ApiClient.instance;
+var EdenAiApiDocumentation = require('eden_ai_api_documentation');
+var defaultClient = EdenAiApiDocumentation.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-let Bearer = defaultClient.authentications['Bearer'];
+var Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdenAiApiDocumentation.AutoMLTextDataApi();
-let projectId = "projectId_example"; // String | 
+var apiInstance = new EdenAiApiDocumentation.AutoMLTextDataApi();
 
-apiInstance.autoMLTextProjectDetail(projectId, (error, data, response) => {
+var projectId = "projectId_example"; // String | 
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-});
+};
+apiInstance.automlTextProjectDetail(projectId, callback);
 ```
 
 ### Parameters
@@ -491,12 +533,12 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: multipart/form-data
  - **Accept**: application/json
 
-<a name="autoMLTextProjectList"></a>
-# **autoMLTextProjectList**
-> autoMLTextProjectList()
+<a name="automlTextProjectList"></a>
+# **automlTextProjectList**
+> automlTextProjectList()
 
 
 
@@ -504,23 +546,25 @@ AutoML Text Project List
 
 ### Example
 ```javascript
-import {EdenAiApiDocumentation} from 'eden_ai_api_documentation';
-let defaultClient = EdenAiApiDocumentation.ApiClient.instance;
+var EdenAiApiDocumentation = require('eden_ai_api_documentation');
+var defaultClient = EdenAiApiDocumentation.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-let Bearer = defaultClient.authentications['Bearer'];
+var Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdenAiApiDocumentation.AutoMLTextDataApi();
-apiInstance.autoMLTextProjectList((error, data, response) => {
+var apiInstance = new EdenAiApiDocumentation.AutoMLTextDataApi();
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-});
+};
+apiInstance.automlTextProjectList(callback);
 ```
 
 ### Parameters
@@ -536,12 +580,12 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: multipart/form-data
  - **Accept**: application/json
 
-<a name="autoMLTextProjectUpdate"></a>
-# **autoMLTextProjectUpdate**
-> autoMLTextProjectUpdate(projectName, projectDescription, type, language, projectId)
+<a name="automlTextProjectUpdate"></a>
+# **automlTextProjectUpdate**
+> automlTextProjectUpdate(projectIdprojectName, projectDescription, type, language)
 
 
 
@@ -549,40 +593,47 @@ AutoML Text Project Update
 
 ### Example
 ```javascript
-import {EdenAiApiDocumentation} from 'eden_ai_api_documentation';
-let defaultClient = EdenAiApiDocumentation.ApiClient.instance;
+var EdenAiApiDocumentation = require('eden_ai_api_documentation');
+var defaultClient = EdenAiApiDocumentation.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-let Bearer = defaultClient.authentications['Bearer'];
+var Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdenAiApiDocumentation.AutoMLTextDataApi();
-let projectName = "projectName_example"; // String | 
-let projectDescription = "projectDescription_example"; // String | 
-let type = "type_example"; // String | 
-let language = "language_example"; // String | 
-let projectId = "projectId_example"; // String | 
+var apiInstance = new EdenAiApiDocumentation.AutoMLTextDataApi();
 
-apiInstance.autoMLTextProjectUpdate(projectName, projectDescription, type, language, projectId, (error, data, response) => {
+var projectId = "projectId_example"; // String | 
+
+var projectName = "projectName_example"; // String | 
+
+var projectDescription = "projectDescription_example"; // String | 
+
+var type = "type_example"; // String | 
+
+var language = "language_example"; // String | 
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-});
+};
+apiInstance.automlTextProjectUpdate(projectIdprojectName, projectDescription, type, language, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **projectId** | **String**|  | 
  **projectName** | **String**|  | 
  **projectDescription** | **String**|  | 
  **type** | **String**|  | 
  **language** | **String**|  | 
- **projectId** | **String**|  | 
 
 ### Return type
 

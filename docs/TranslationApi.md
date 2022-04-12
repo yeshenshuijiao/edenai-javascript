@@ -1,66 +1,65 @@
 # EdenAiApiDocumentation.TranslationApi
 
-All URIs are relative to *//https://api.edenai.run/v1/*
+All URIs are relative to *https://api.edenai.run/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**automaticTranslation**](TranslationApi.md#automaticTranslation) | **POST** /pretrained/translation/automatic_translation | 
-[**langiageDetection**](TranslationApi.md#langiageDetection) | **POST** /pretrained/translation/language_detection | 
+[**languageDetection**](TranslationApi.md#languageDetection) | **POST** /pretrained/translation/language_detection | 
+
 
 <a name="automaticTranslation"></a>
 # **automaticTranslation**
-> InlineResponse2007 automaticTranslation(text, sourceLanguage, targetLanguage, providers, text, sourceLanguage, targetLanguage, providers)
+> InlineResponse2009 automaticTranslation(text, sourceLanguage, targetLanguage, providers)
 
 
 
-Machine translation refers to the translation of a text into another language using rules, statics or ml technics.  **SUPPORTED LANGUAGE**  |Name|Type|Value| |----|----|-----| |**Afrikaans**|&#x60;string&#x60;|&#x60;af-AF&#x60;| |**Albanian**|&#x60;string&#x60;|&#x60;sq-SQ&#x60;| |**Amharic**|&#x60;string&#x60;|&#x60;am-AM&#x60;| |**Arabic**|&#x60;string&#x60;|&#x60;ar-XA&#x60;| |**Armenian**|&#x60;string&#x60;|&#x60;hy-HY&#x60;| |**Azerbaijani**|&#x60;string&#x60;|&#x60;az-AZ&#x60;| |**Basque**|&#x60;string&#x60;|&#x60;eu-BA&#x60;| |**Belarusian**|&#x60;string&#x60;|&#x60;be-BE&#x60;| |**Bengali**|&#x60;string&#x60;|&#x60;bn-BN&#x60;| |**Bosnian**|&#x60;string&#x60;|&#x60;bs-BS&#x60;| |**Bulgarian**|&#x60;string&#x60;|&#x60;bg-BG&#x60;| |**Catalan**|&#x60;string&#x60;|&#x60;ca-ES&#x60;| |**Cebuano**|&#x60;string&#x60;|&#x60;ceb-CB&#x60;| |**Chinese-Simplified**|&#x60;string&#x60;|&#x60;zh-CN&#x60;| |**Chinese-Traditional**|&#x60;string&#x60;|&#x60;zh-TW&#x60;| |**Corsican**|&#x60;string&#x60;|&#x60;co-CO&#x60;| |**Croatian**|&#x60;string&#x60;|&#x60;hr-HR&#x60;| |**Czech**|&#x60;string&#x60;|&#x60;cz-CZ&#x60;| |**Danish**|&#x60;string&#x60;|&#x60;da-DK&#x60;| |**Dutch**|&#x60;string&#x60;|&#x60;nl-NL&#x60;| |**English**|&#x60;string&#x60;|&#x60;en-US&#x60;| |**Esperanto**|&#x60;string&#x60;|&#x60;eo-EO&#x60;| |**Estonian**|&#x60;string&#x60;|&#x60;et-ET&#x60;| |**Finnish**|&#x60;string&#x60;|&#x60;fn-FN&#x60;| |**French**|&#x60;string&#x60;|&#x60;fr-FR&#x60;| |**French-Canadian**|&#x60;string&#x60;|&#x60;fr-CA&#x60;| |**Frisian**|&#x60;string&#x60;|&#x60;fy-FY&#x60;| |**Galician**|&#x60;string&#x60;|&#x60;gl-GL&#x60;| |**Georgian**|&#x60;string&#x60;|&#x60;ka-KA&#x60;| |**German**|&#x60;string&#x60;|&#x60;de-DE&#x60;| |**Greek**|&#x60;string&#x60;|&#x60;gr-GR&#x60;| |**Gujarati**|&#x60;string&#x60;|&#x60;gu-GU&#x60;| |**Haitian-Creole**|&#x60;string&#x60;|&#x60;ht-HT&#x60;| |**Hausa**|&#x60;string&#x60;|&#x60;ha-HA&#x60;| |**Hawaiian**|&#x60;string&#x60;|&#x60;haw-HA&#x60;| |**Hebrew**|&#x60;string&#x60;|&#x60;he-HE&#x60;| |**Hindi**|&#x60;string&#x60;|&#x60;hi-HI&#x60;| |**Hmong**|&#x60;string&#x60;|&#x60;hmn_HM&#x60;| |**Hungarian**|&#x60;string&#x60;|&#x60;hu-HU&#x60;| |**Icelandic**|&#x60;string&#x60;|&#x60;is-IS&#x60;| |**Igbo**|&#x60;string&#x60;|&#x60;ig-IG&#x60;| |**Indonesian**|&#x60;string&#x60;|&#x60;id-ID&#x60;| |**Irish**|&#x60;string&#x60;|&#x60;ga-IR&#x60;| |**Italian**|&#x60;string&#x60;|&#x60;it-IT&#x60;| |**Japanese**|&#x60;string&#x60;|&#x60;ja-JP&#x60;| |**Javanese**|&#x60;string&#x60;|&#x60;jv-JV&#x60;| |**Kannada**|&#x60;string&#x60;|&#x60;kn-KN&#x60;| |**Kazakh**|&#x60;string&#x60;|&#x60;kk-KK&#x60;| |**Khmer**|&#x60;string&#x60;|&#x60;km-KM&#x60;| |**Korean**|&#x60;string&#x60;|&#x60;ko-KR&#x60;| |**Kurdish**|&#x60;string&#x60;|&#x60;ku-KU&#x60;| |**Kyrgyz**|&#x60;string&#x60;|&#x60;ky-KY&#x60;| |**Lao**|&#x60;string&#x60;|&#x60;lo-LO&#x60;| |**Latin**|&#x60;string&#x60;|&#x60;la-LA&#x60;| |**Latvian**|&#x60;string&#x60;|&#x60;lv-LV&#x60;| |**Lithuanian**|&#x60;string&#x60;|&#x60;lt-LT&#x60;| |**Luxembourgish**|&#x60;string&#x60;|&#x60;lb-LB&#x60;| |**Macedonian**|&#x60;string&#x60;|&#x60;mk-MK&#x60;| |**Malagasy**|&#x60;string&#x60;|&#x60;mg-MG&#x60;| |**Malay**|&#x60;string&#x60;|&#x60;ms-MY&#x60;| |**Malayalam**|&#x60;string&#x60;|&#x60;ml-ML&#x60;| |**Maltese**|&#x60;string&#x60;|&#x60;mt-MT&#x60;| |**Maori**|&#x60;string&#x60;|&#x60;mi-MI&#x60;| |**Marathi**|&#x60;string&#x60;|&#x60;mr-MR&#x60;| |**Mongolian**|&#x60;string&#x60;|&#x60;mn-MN&#x60;| |**Myanmar-Burmese**|&#x60;string&#x60;|&#x60;my-MY&#x60;| |**Nepali**|&#x60;string&#x60;|&#x60;ne-NE&#x60;| |**Norwegian**|&#x60;string&#x60;|&#x60;no-NO&#x60;| |**Nyanja Chichewa**|&#x60;string&#x60;|&#x60;ny-NY&#x60;| |**Pashto**|&#x60;string&#x60;|&#x60;ps-PS&#x60;| |**Persian**|&#x60;string&#x60;|&#x60;fa-FA&#x60;| |**Polish**|&#x60;string&#x60;|&#x60;pl-PO&#x60;| |**Portuguese**|&#x60;string&#x60;|&#x60;pt-PT&#x60;| |**Punjabi**|&#x60;string&#x60;|&#x60;pa-PA&#x60;| |**Romanian**|&#x60;string&#x60;|&#x60;ro-RO&#x60;| |**Russian**|&#x60;string&#x60;|&#x60;ru-RU&#x60;| |**Samoan**|&#x60;string&#x60;|&#x60;sm-SM&#x60;| |**Scots Gaelic**|&#x60;string&#x60;|&#x60;gd-GD&#x60;| |**Serbian**|&#x60;string&#x60;|&#x60;sr-SR&#x60;| |**Sesotho**|&#x60;string&#x60;|&#x60;st-ST&#x60;| |**Shona**|&#x60;string&#x60;|&#x60;sn-SN&#x60;| |**Sindhi**|&#x60;string&#x60;|&#x60;sd-SD&#x60;| |**Sinhala-Sinhalese**|&#x60;string&#x60;|&#x60;si-SI&#x60;| |**Slovak**|&#x60;string&#x60;|&#x60;sk-SK&#x60;| |**Slovenian**|&#x60;string&#x60;|&#x60;sl-SL&#x60;| |**Somali**|&#x60;string&#x60;|&#x60;so-SO&#x60;| |**Spanish**|&#x60;string&#x60;|&#x60;es-ES&#x60;| |**Sundanese**|&#x60;string&#x60;|&#x60;su-SU&#x60;| |**Swahili**|&#x60;string&#x60;|&#x60;sh-SH&#x60;| |**Swedish**|&#x60;string&#x60;|&#x60;sw-SW&#x60;| |**Tagalog-Filipino**|&#x60;string&#x60;|&#x60;tl-TL&#x60;| |**Tajik**|&#x60;string&#x60;|&#x60;tg-TG&#x60;| |**Tamil**|&#x60;string&#x60;|&#x60;ta-TA&#x60;| |**Telugu**|&#x60;string&#x60;|&#x60;te-TE&#x60;| |**Thai**|&#x60;string&#x60;|&#x60;th-TH&#x60;| |**Turkish**|&#x60;string&#x60;|&#x60;tr-TR&#x60;| |**Ukrainian**|&#x60;string&#x60;|&#x60;uk-UK&#x60;| |**Urdu**|&#x60;string&#x60;|&#x60;ur-UR&#x60;| |**Uzbek**|&#x60;string&#x60;|&#x60;uz-UZ&#x60;| |**Vietnamese**|&#x60;string&#x60;|&#x60;vi-VI&#x60;| |**Welsh**|&#x60;string&#x60;|&#x60;cy-CY&#x60;| |**Xhosa**|&#x60;string&#x60;|&#x60;xh-XH&#x60;| |**Yiddish**|&#x60;string&#x60;|&#x60;yi-YI&#x60;| |**Yoruba**|&#x60;string&#x60;|&#x60;yo-YO&#x60;|  **AVAILABLE PROVIDERS**   |Name|Value|Version| |----|-----|-------| |[**Microsoft Azure**](https://www.edenai.co/catalog/azure-translator)|&#x60;microsoft&#x60;|&#x60;v3.0&#x60;| |[**Amazon Web Services**](https://www.edenai.co/catalog/amazon-translate)|&#x60;amazon&#x60;|&#x60;boto3 (v1.15.18)&#x60;| |[**Google Cloud**](https://www.edenai.co/catalog/google-cloud-translation)|&#x60;google&#x60;|&#x60;v3&#x60;|
+Machine translation refers to the translation of a text into another language using rules, statics or ml technics.  **SUPPORTED LANGUAGE**  |Name|Type|Value| |----|----|-----| |**Afrikaans**|`string`|`af-AF`| |**Albanian**|`string`|`sq-SQ`| |**Amharic**|`string`|`am-AM`| |**Arabic**|`string`|`ar-XA`| |**Armenian**|`string`|`hy-HY`| |**Azerbaijani**|`string`|`az-AZ`| |**Basque**|`string`|`eu-BA`| |**Belarusian**|`string`|`be-BE`| |**Bengali**|`string`|`bn-BN`| |**Bosnian**|`string`|`bs-BS`| |**Bulgarian**|`string`|`bg-BG`| |**Catalan**|`string`|`ca-ES`| |**Cebuano**|`string`|`ceb-CB`| |**Chinese-Simplified**|`string`|`zh-CN`| |**Chinese-Traditional**|`string`|`zh-TW`| |**Corsican**|`string`|`co-CO`| |**Croatian**|`string`|`hr-HR`| |**Czech**|`string`|`cz-CZ`| |**Danish**|`string`|`da-DK`| |**Dutch**|`string`|`nl-NL`| |**English**|`string`|`en-US`| |**Esperanto**|`string`|`eo-EO`| |**Estonian**|`string`|`et-ET`| |**Finnish**|`string`|`fn-FN`| |**French**|`string`|`fr-FR`| |**French-Canadian**|`string`|`fr-CA`| |**Frisian**|`string`|`fy-FY`| |**Galician**|`string`|`gl-GL`| |**Georgian**|`string`|`ka-KA`| |**German**|`string`|`de-DE`| |**Greek**|`string`|`gr-GR`| |**Gujarati**|`string`|`gu-GU`| |**Haitian-Creole**|`string`|`ht-HT`| |**Hausa**|`string`|`ha-HA`| |**Hawaiian**|`string`|`haw-HA`| |**Hebrew**|`string`|`he-HE`| |**Hindi**|`string`|`hi-HI`| |**Hmong**|`string`|`hmn_HM`| |**Hungarian**|`string`|`hu-HU`| |**Icelandic**|`string`|`is-IS`| |**Igbo**|`string`|`ig-IG`| |**Indonesian**|`string`|`id-ID`| |**Irish**|`string`|`ga-IR`| |**Italian**|`string`|`it-IT`| |**Japanese**|`string`|`ja-JP`| |**Javanese**|`string`|`jv-JV`| |**Kannada**|`string`|`kn-KN`| |**Kazakh**|`string`|`kk-KK`| |**Khmer**|`string`|`km-KM`| |**Korean**|`string`|`ko-KR`| |**Kurdish**|`string`|`ku-KU`| |**Kyrgyz**|`string`|`ky-KY`| |**Lao**|`string`|`lo-LO`| |**Latin**|`string`|`la-LA`| |**Latvian**|`string`|`lv-LV`| |**Lithuanian**|`string`|`lt-LT`| |**Luxembourgish**|`string`|`lb-LB`| |**Macedonian**|`string`|`mk-MK`| |**Malagasy**|`string`|`mg-MG`| |**Malay**|`string`|`ms-MY`| |**Malayalam**|`string`|`ml-ML`| |**Maltese**|`string`|`mt-MT`| |**Maori**|`string`|`mi-MI`| |**Marathi**|`string`|`mr-MR`| |**Mongolian**|`string`|`mn-MN`| |**Myanmar-Burmese**|`string`|`my-MY`| |**Nepali**|`string`|`ne-NE`| |**Norwegian**|`string`|`no-NO`| |**Nyanja Chichewa**|`string`|`ny-NY`| |**Pashto**|`string`|`ps-PS`| |**Persian**|`string`|`fa-FA`| |**Polish**|`string`|`pl-PO`| |**Portuguese**|`string`|`pt-PT`| |**Punjabi**|`string`|`pa-PA`| |**Romanian**|`string`|`ro-RO`| |**Russian**|`string`|`ru-RU`| |**Samoan**|`string`|`sm-SM`| |**Scots Gaelic**|`string`|`gd-GD`| |**Serbian**|`string`|`sr-SR`| |**Sesotho**|`string`|`st-ST`| |**Shona**|`string`|`sn-SN`| |**Sindhi**|`string`|`sd-SD`| |**Sinhala-Sinhalese**|`string`|`si-SI`| |**Slovak**|`string`|`sk-SK`| |**Slovenian**|`string`|`sl-SL`| |**Somali**|`string`|`so-SO`| |**Spanish**|`string`|`es-ES`| |**Sundanese**|`string`|`su-SU`| |**Swahili**|`string`|`sh-SH`| |**Swedish**|`string`|`sw-SW`| |**Tagalog-Filipino**|`string`|`tl-TL`| |**Tajik**|`string`|`tg-TG`| |**Tamil**|`string`|`ta-TA`| |**Telugu**|`string`|`te-TE`| |**Thai**|`string`|`th-TH`| |**Turkish**|`string`|`tr-TR`| |**Ukrainian**|`string`|`uk-UK`| |**Urdu**|`string`|`ur-UR`| |**Uzbek**|`string`|`uz-UZ`| |**Vietnamese**|`string`|`vi-VI`| |**Welsh**|`string`|`cy-CY`| |**Xhosa**|`string`|`xh-XH`| |**Yiddish**|`string`|`yi-YI`| |**Yoruba**|`string`|`yo-YO`|  **AVAILABLE PROVIDERS**   |Name|Value|Version| |----|-----|-------| |**Microsoft Azure**|`microsoft`| `v3.0`  |**Amazon Web Services**|`amazon`| `boto3 (v1.15.18)`  |**Google Cloud**|`google`| `v3` 
 
 ### Example
 ```javascript
-import {EdenAiApiDocumentation} from 'eden_ai_api_documentation';
-let defaultClient = EdenAiApiDocumentation.ApiClient.instance;
+var EdenAiApiDocumentation = require('eden_ai_api_documentation');
+var defaultClient = EdenAiApiDocumentation.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-let Bearer = defaultClient.authentications['Bearer'];
+var Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdenAiApiDocumentation.TranslationApi();
-let text = "text_example"; // String | 
-let sourceLanguage = "sourceLanguage_example"; // String | 
-let targetLanguage = "targetLanguage_example"; // String | 
-let providers = "providers_example"; // String | 
-let text = "text_example"; // String | 
-let sourceLanguage = "sourceLanguage_example"; // String | 
-let targetLanguage = "targetLanguage_example"; // String | 
-let providers = "providers_example"; // String | 
+var apiInstance = new EdenAiApiDocumentation.TranslationApi();
 
-apiInstance.automaticTranslation(text, sourceLanguage, targetLanguage, providers, text, sourceLanguage, targetLanguage, providers, (error, data, response) => {
+var text = "text_example"; // String | Text to translate
+
+var sourceLanguage = "sourceLanguage_example"; // String | Language code of text (ex: fr (French), en (English), es (Spanish))
+
+var targetLanguage = "targetLanguage_example"; // String | Language code of text (ex: fr (French), en (English), es (Spanish))
+
+var providers = "providers_example"; // String | Provider to compare (ex: [ 'amazon', 'microsoft', 'ibm', 'google'])
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.automaticTranslation(text, sourceLanguage, targetLanguage, providers, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **text** | **String**|  | 
- **sourceLanguage** | **String**|  | 
- **targetLanguage** | **String**|  | 
- **providers** | **String**|  | 
- **text** | **String**|  | 
- **sourceLanguage** | **String**|  | 
- **targetLanguage** | **String**|  | 
- **providers** | **String**|  | 
+ **text** | **String**| Text to translate | 
+ **sourceLanguage** | **String**| Language code of text (ex: fr (French), en (English), es (Spanish)) | 
+ **targetLanguage** | **String**| Language code of text (ex: fr (French), en (English), es (Spanish)) | 
+ **providers** | **String**| Provider to compare (ex: [ 'amazon', 'microsoft', 'ibm', 'google']) | 
 
 ### Return type
 
-[**InlineResponse2007**](InlineResponse2007.md)
+[**InlineResponse2009**](InlineResponse2009.md)
 
 ### Authorization
 
@@ -68,55 +67,55 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded, multipart/form-data
+ - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json
 
-<a name="langiageDetection"></a>
-# **langiageDetection**
-> InlineResponse2008 langiageDetection(text, providers, text, providers)
+<a name="languageDetection"></a>
+# **languageDetection**
+> InlineResponse20010 languageDetection(text, providers)
 
 
 
-Language Detection or language guessing is the algorithm of determining which natural language given content is in.  **AVAILABLE PROVIDERS**   |Name|Value|Version| |----|-----|-------| |[**Microsoft Azure**](https://www.edenai.co/catalog/azure-translator)|&#x60;microsoft&#x60;|&#x60;v3.1&#x60;| |[**Amazon Web Services**](https://www.edenai.co/catalog/amazon-translate)|&#x60;amazon&#x60;|&#x60;boto3 (v1.15.18)&#x60;| |[**Google Cloud**](https://www.edenai.co/catalog/google-cloud-translation)|&#x60;google&#x60;|&#x60;v1&#x60;| |[**Lettria**](https://www.edenai.co/catalog/Lettria)|&#x60;lettria&#x60;|&#x60;v5.5.2&#x60;|
+Language Detection or language guessing is the algorithm of determining which natural language given content is in.  **AVAILABLE PROVIDERS**   |Name|Value|Version| |----|-----|-------| |**Microsoft Azure**|`microsoft`| `v3.1`  |**Amazon Web Services**|`amazon`| `boto3 (v1.15.18)`  |**Google Cloud**|`google`| `v1` 
 
 ### Example
 ```javascript
-import {EdenAiApiDocumentation} from 'eden_ai_api_documentation';
-let defaultClient = EdenAiApiDocumentation.ApiClient.instance;
+var EdenAiApiDocumentation = require('eden_ai_api_documentation');
+var defaultClient = EdenAiApiDocumentation.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-let Bearer = defaultClient.authentications['Bearer'];
+var Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdenAiApiDocumentation.TranslationApi();
-let text = "text_example"; // String | 
-let providers = "providers_example"; // String | 
-let text = "text_example"; // String | 
-let providers = "providers_example"; // String | 
+var apiInstance = new EdenAiApiDocumentation.TranslationApi();
 
-apiInstance.langiageDetection(text, providers, text, providers, (error, data, response) => {
+var text = "text_example"; // String | Text to analyze
+
+var providers = "providers_example"; // String | Provider to compare (ex: [ 'amazon', 'microsoft', 'ibm','google'])
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.languageDetection(text, providers, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **text** | **String**|  | 
- **providers** | **String**|  | 
- **text** | **String**|  | 
- **providers** | **String**|  | 
+ **text** | **String**| Text to analyze | 
+ **providers** | **String**| Provider to compare (ex: [ 'amazon', 'microsoft', 'ibm','google']) | 
 
 ### Return type
 
-[**InlineResponse2008**](InlineResponse2008.md)
+[**InlineResponse20010**](InlineResponse20010.md)
 
 ### Authorization
 
@@ -124,6 +123,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded, multipart/form-data
+ - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json
 
