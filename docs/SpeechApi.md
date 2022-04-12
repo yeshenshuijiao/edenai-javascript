@@ -1,62 +1,72 @@
 # EdenAiApiDocumentation.SpeechApi
 
-All URIs are relative to *//https://api.edenai.run/v1/*
+All URIs are relative to *https://api.edenai.run/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**asynchronousSpeechRecognition**](SpeechApi.md#asynchronousSpeechRecognition) | **POST** /pretrained/audio/speech_recognition_async | 
-[**asynchronousSpeechRecognition_0**](SpeechApi.md#asynchronousSpeechRecognition_0) | **GET** /pretrained/audio/speech_recognition_async/{job_id} | 
-[**speechRecognition**](SpeechApi.md#speechRecognition) | **POST** /pretrained/audio/speech_recognition | 
+[**asyncSpeechToText**](SpeechApi.md#asyncSpeechToText) | **POST** /pretrained/audio/speech_recognition_async | 
+[**asyncSpeechToText_0**](SpeechApi.md#asyncSpeechToText_0) | **GET** /pretrained/audio/speech_recognition_async/{job_id} | 
+[**speechToText**](SpeechApi.md#speechToText) | **POST** /pretrained/audio/speech_to_text | 
 [**textToSpeech**](SpeechApi.md#textToSpeech) | **POST** /pretrained/audio/text_to_speech | 
 
-<a name="asynchronousSpeechRecognition"></a>
-# **asynchronousSpeechRecognition**
-> asynchronousSpeechRecognition(language, files, providers, webhookReceiver, usersWebhookParameters)
+
+<a name="asyncSpeechToText"></a>
+# **asyncSpeechToText**
+> InlineResponse2001 asyncSpeechToText(language, files, providers, opts)
 
 
 
-Speech recognition is technology that can recognize spoken words, which can then be converted to text. This endpoint allows you to launch asynchronous speech recognition jobs.  **SUPPORTED LANGUAGE**  |Name|Type|Value| |----|----|-----| |**English (US)**|&#x60;string&#x60;|&#x60;en-US&#x60;| |**English (GB)**|&#x60;string&#x60;|&#x60;en-GB&#x60;| |**French**|&#x60;string&#x60;|&#x60;fr-FR&#x60;| |**Spanish**|&#x60;string&#x60;|&#x60;es-ES&#x60;| |**Dutch (Netherlands)**|&#x60;string&#x60;|&#x60;nl-NL&#x60;| |**Japanese**|&#x60;string&#x60;|&#x60;ja-JP&#x60;| |**Russian**|&#x60;string&#x60;|&#x60;ru-RU&#x60;| |**Arabic**|&#x60;string&#x60;|&#x60;ar-SA&#x60;| |**Italian**|&#x60;string&#x60;|&#x60;it-IT&#x60;| |**Korean**|&#x60;string&#x60;|&#x60;ko-KR&#x60;| |**Portuguese**|&#x60;string&#x60;|&#x60;pt-PT&#x60;| |**Turkish**|&#x60;string&#x60;|&#x60;tr-TR&#x60;| |**Indonesian**|&#x60;string&#x60;|&#x60;id-ID&#x60;| |**Malay**|&#x60;string&#x60;|&#x60;ms-MY&#x60;|  **AVAILABLE PROVIDERS**   |Name|Value|Version| |----|-----|-------| |[**Amazon Web Services**](https://www.edenai.co/catalog/amazon-transcribe)|&#x60;amazon&#x60;|&#x60;boto3 (v1.15.18)&#x60;| |[**Assembly**](https://www.edenai.co/catalog/assembly-ai)|&#x60;assembly&#x60;|&#x60;v1&#x60;| |[**speechmatics**]()|&#x60;Speechmatics&#x60;|&#x60;v1&#x60;|
+Speech recognition is technology that can recognize spoken words, which can then be converted to text. This endpoint allows you to launch asynchronous speech recognition jobs.  **SUPPORTED LANGUAGE**  |Name|Type|Value| |----|----|-----| |**English (US)**|`string`|`en-US`| |**English (GB)**|`string`|`en-GB`| |**French**|`string`|`fr-FR`| |**Spanish**|`string`|`es-ES`| |**Dutch (Netherlands)**|`string`|`nl-NL`| |**Japanese**|`string`|`ja-JP`| |**Russian**|`string`|`ru-RU`| |**Arabic**|`string`|`ar-SA`| |**Italian**|`string`|`it-IT`| |**Korean**|`string`|`ko-KR`| |**Portuguese**|`string`|`pt-PT`| |**Turkish**|`string`|`tr-TR`| |**Indonesian**|`string`|`id-ID`| |**Malay**|`string`|`ms-MY`|  **AVAILABLE PROVIDERS**   |Name|Value|Version| |----|-----|-------| |**Amazon Web Services**|`amazon`| `boto3 (v1.15.18)`  |**Speechmatics**|`speechmatics`| `2.7.0` 
 
 ### Example
 ```javascript
-import {EdenAiApiDocumentation} from 'eden_ai_api_documentation';
-let defaultClient = EdenAiApiDocumentation.ApiClient.instance;
+var EdenAiApiDocumentation = require('eden_ai_api_documentation');
+var defaultClient = EdenAiApiDocumentation.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-let Bearer = defaultClient.authentications['Bearer'];
+var Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdenAiApiDocumentation.SpeechApi();
-let language = "language_example"; // String | 
-let files = "files_example"; // Blob | 
-let providers = "providers_example"; // String | 
-let webhookReceiver = "webhookReceiver_example"; // String | 
-let usersWebhookParameters = "usersWebhookParameters_example"; // String | 
+var apiInstance = new EdenAiApiDocumentation.SpeechApi();
 
-apiInstance.asynchronousSpeechRecognition(language, files, providers, webhookReceiver, usersWebhookParameters, (error, data, response) => {
+var language = "language_example"; // String | Language code expected (ex: fr-FR (French), en-US (English), es-ES (Spanish), nl-NL Dutch (Netherlands))
+
+var files = "/path/to/file.txt"; // File | File to analyse (ex: mp3, wav, m4a)
+
+var providers = "providers_example"; // String | Provider to compare (ex: [ 'amazon', 'microsoft', 'ibm','google', 'threescribe])
+
+var opts = { 
+  'webhookReceiver': "webhookReceiver_example", // String | Webhook reciever should be a valid https URL (ex : https://your.listner.com/endpoint)
+  'usersWebhookParameters': "usersWebhookParameters_example", // String | Json data that consist of additional parameters that will be sent back to the webhook receiver (ex: api key for security).                    **NOTE : The data will be returned back as a string that should be decoded into a json object!**
+  'vocab': "vocab_example" // String | Speechmatics allows to add a custom vocab dictionnary (json format) for better recognition, you can add it via this parameter.                     It has to be a list of dictionaries : {'content'(Required) : 'string', 'sounds_like'(Optional) : 'list of strings'}
+};
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.asyncSpeechToText(language, files, providers, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **language** | **String**|  | 
- **files** | **Blob**|  | 
- **providers** | **String**|  | 
- **webhookReceiver** | **String**|  | 
- **usersWebhookParameters** | **String**|  | 
+ **language** | **String**| Language code expected (ex: fr-FR (French), en-US (English), es-ES (Spanish), nl-NL Dutch (Netherlands)) | 
+ **files** | **File**| File to analyse (ex: mp3, wav, m4a) | 
+ **providers** | **String**| Provider to compare (ex: [ 'amazon', 'microsoft', 'ibm','google', 'threescribe]) | 
+ **webhookReceiver** | **String**| Webhook reciever should be a valid https URL (ex : https://your.listner.com/endpoint) | [optional] 
+ **usersWebhookParameters** | **String**| Json data that consist of additional parameters that will be sent back to the webhook receiver (ex: api key for security).                    **NOTE : The data will be returned back as a string that should be decoded into a json object!** | [optional] 
+ **vocab** | **String**| Speechmatics allows to add a custom vocab dictionnary (json format) for better recognition, you can add it via this parameter.                     It has to be a list of dictionaries : {'content'(Required) : 'string', 'sounds_like'(Optional) : 'list of strings'} | [optional] 
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse2001**](InlineResponse2001.md)
 
 ### Authorization
 
@@ -67,9 +77,9 @@ null (empty response body)
  - **Content-Type**: multipart/form-data
  - **Accept**: application/json
 
-<a name="asynchronousSpeechRecognition_0"></a>
-# **asynchronousSpeechRecognition_0**
-> asynchronousSpeechRecognition_0(jobId)
+<a name="asyncSpeechToText_0"></a>
+# **asyncSpeechToText_0**
+> InlineResponse2002 asyncSpeechToText_0(jobId)
 
 
 
@@ -77,25 +87,28 @@ This endpoint allows you to check the state of  your asynchronous speech recogni
 
 ### Example
 ```javascript
-import {EdenAiApiDocumentation} from 'eden_ai_api_documentation';
-let defaultClient = EdenAiApiDocumentation.ApiClient.instance;
+var EdenAiApiDocumentation = require('eden_ai_api_documentation');
+var defaultClient = EdenAiApiDocumentation.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-let Bearer = defaultClient.authentications['Bearer'];
+var Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdenAiApiDocumentation.SpeechApi();
-let jobId = "jobId_example"; // String | 
+var apiInstance = new EdenAiApiDocumentation.SpeechApi();
 
-apiInstance.asynchronousSpeechRecognition_0(jobId, (error, data, response) => {
+var jobId = "jobId_example"; // String | 
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.asyncSpeechToText_0(jobId, callback);
 ```
 
 ### Parameters
@@ -106,7 +119,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 
@@ -114,49 +127,58 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="speechRecognition"></a>
-# **speechRecognition**
-> InlineResponse201 speechRecognition(language, files, providers)
+<a name="speechToText"></a>
+# **speechToText**
+> InlineResponse201 speechToText(language, files, providers, opts)
 
 
 
-Speech recognition is technology that can recognize spoken words, which can then be converted to text.  **SUPPORTED LANGUAGE**  |Name|Type|Value| |----|----|-----| |**English (US)**|&#x60;string&#x60;|&#x60;en-US&#x60;| |**English (GB)**|&#x60;string&#x60;|&#x60;en-GB&#x60;| |**French**|&#x60;string&#x60;|&#x60;fr-FR&#x60;| |**Spanish**|&#x60;string&#x60;|&#x60;es-ES&#x60;| |**Dutch (Netherlands)**|&#x60;string&#x60;|&#x60;nl-NL&#x60;| |**Japanese**|&#x60;string&#x60;|&#x60;ja-JP&#x60;| |**Russian**|&#x60;string&#x60;|&#x60;ru-RU&#x60;| |**Arabic**|&#x60;string&#x60;|&#x60;ar-SA&#x60;| |**Italian**|&#x60;string&#x60;|&#x60;it-IT&#x60;| |**Korean**|&#x60;string&#x60;|&#x60;ko-KR&#x60;| |**Portuguese**|&#x60;string&#x60;|&#x60;pt-PT&#x60;| |**Turkish**|&#x60;string&#x60;|&#x60;tr-TR&#x60;| |**Indonesian**|&#x60;string&#x60;|&#x60;id-ID&#x60;| |**Malay**|&#x60;string&#x60;|&#x60;ms-MY&#x60;|  **AVAILABLE PROVIDERS**   |Name|Value|Version| |----|-----|-------| |[**Microsoft Azure**](https://www.edenai.co/catalog/azure-speech-to-text)|&#x60;microsoft&#x60;|&#x60;v1.0&#x60;| |[**Amazon Web Services**](https://www.edenai.co/catalog/amazon-transcribe)|&#x60;amazon&#x60;|&#x60;boto3 (v1.15.18)&#x60;| |[**Google Cloud**](https://www.edenai.co/catalog/google-cloud-speech-to-text)|&#x60;google&#x60;|&#x60;v1p1beta1&#x60;| |[**Deepgram**](https://www.edenai.co/catalog/deepgram)|&#x60;deepgram&#x60;|&#x60;v1&#x60;| |[**Speechmatics**]()|&#x60;speechmatics&#x60;|&#x60;v1&#x60;| |[**Assembly**](https://www.edenai.co/catalog/assembly-ai)|&#x60;assembly&#x60;|&#x60;v1&#x60;|
+Speech recognition is technology that can recognize spoken words, which can then be converted to text.  **SUPPORTED LANGUAGE**  |Name|Type|Value| |----|----|-----| |**English (US)**|`string`|`en-US`| |**English (GB)**|`string`|`en-GB`| |**French**|`string`|`fr-FR`| |**Spanish**|`string`|`es-ES`| |**Dutch (Netherlands)**|`string`|`nl-NL`| |**Japanese**|`string`|`ja-JP`| |**Russian**|`string`|`ru-RU`| |**Arabic**|`string`|`ar-SA`| |**Italian**|`string`|`it-IT`| |**Korean**|`string`|`ko-KR`| |**Portuguese**|`string`|`pt-PT`| |**Turkish**|`string`|`tr-TR`| |**Indonesian**|`string`|`id-ID`| |**Malay**|`string`|`ms-MY`|  **AVAILABLE PROVIDERS**   |Name|Value|Version| |----|-----|-------| |**Microsoft Azure**|`microsoft`| `v1.0`  |**Amazon Web Services**|`amazon`| `boto3 (v1.15.18)`  |**Google Cloud**|`google`| `v1p1beta1`  |**Deepgram**|`deepgram`| `v1`  |**RevAi**|`revai`| `v1` 
 
 ### Example
 ```javascript
-import {EdenAiApiDocumentation} from 'eden_ai_api_documentation';
-let defaultClient = EdenAiApiDocumentation.ApiClient.instance;
+var EdenAiApiDocumentation = require('eden_ai_api_documentation');
+var defaultClient = EdenAiApiDocumentation.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-let Bearer = defaultClient.authentications['Bearer'];
+var Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdenAiApiDocumentation.SpeechApi();
-let language = "language_example"; // String | 
-let files = "files_example"; // Blob | 
-let providers = "providers_example"; // String | 
+var apiInstance = new EdenAiApiDocumentation.SpeechApi();
 
-apiInstance.speechRecognition(language, files, providers, (error, data, response) => {
+var language = "language_example"; // String | Language code expected (ex: fr-FR (French), en-US (English), es-ES (Spanish), nl-NL Dutch (Netherlands))
+
+var files = "/path/to/file.txt"; // File | File to analyse (ex: mp3, wav, m4a)
+
+var providers = "providers_example"; // String | Provider to compare (ex: [ 'amazon', 'microsoft', 'ibm','google', 'threescribe])
+
+var opts = { 
+  'vocab': "vocab_example" // String | Speechmatics allows to add a custom vocab dictionnary (json format) for better recognition, you can add it via this parameter.                     It has to be a list of dictionaries : {'content'(Required) : 'string', 'sounds_like'(Optional) : 'list of strings'}
+};
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.speechToText(language, files, providers, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **language** | **String**|  | 
- **files** | **Blob**|  | 
- **providers** | **String**|  | 
+ **language** | **String**| Language code expected (ex: fr-FR (French), en-US (English), es-ES (Spanish), nl-NL Dutch (Netherlands)) | 
+ **files** | **File**| File to analyse (ex: mp3, wav, m4a) | 
+ **providers** | **String**| Provider to compare (ex: [ 'amazon', 'microsoft', 'ibm','google', 'threescribe]) | 
+ **vocab** | **String**| Speechmatics allows to add a custom vocab dictionnary (json format) for better recognition, you can add it via this parameter.                     It has to be a list of dictionaries : {'content'(Required) : 'string', 'sounds_like'(Optional) : 'list of strings'} | [optional] 
 
 ### Return type
 
@@ -177,42 +199,48 @@ Name | Type | Description  | Notes
 
 
 
-Text-to-speech (TTS) system converts normal language text into speech.  **SUPPORTED LANGUAGE**  |Name|Type|Value| |----|----|-----| |**Arabic**|&#x60;string&#x60;|&#x60;ar-XA&#x60;| |**Chinese**|&#x60;string&#x60;|&#x60;cmn-CN&#x60;| |**Danish**|&#x60;string&#x60;|&#x60;da-DK&#x60;| |**Dutch**|&#x60;string&#x60;|&#x60;nl-NL&#x60;| |**English (US)**|&#x60;string&#x60;|&#x60;en-US&#x60;| |**English (UK)**|&#x60;string&#x60;|&#x60;en-GB&#x60;| |**German**|&#x60;string&#x60;|&#x60;de-DE&#x60;| |**Italy**|&#x60;string&#x60;|&#x60;it-IT&#x60;| |**Japanese**|&#x60;string&#x60;|&#x60;ja-JP&#x60;| |**Portuguese (Brazil)**|&#x60;string&#x60;|&#x60;pt-BR&#x60;| |**Portuguese (Portugal)**|&#x60;string&#x60;|&#x60;pt-PT&#x60;| |**Russian**|&#x60;string&#x60;|&#x60;ru-RU&#x60;| |**Spanish**|&#x60;string&#x60;|&#x60;es-ES&#x60;|  **AVAILABLE PROVIDERS**   |Name|Value|Version| |----|-----|-------| |[**Microsoft Azure**](https://www.edenai.co/catalog/azure-text-to-speech)|&#x60;microsoft&#x60;|&#x60;v1.0&#x60;| |[**Amazon Web Services**](https://www.edenai.co/catalog/amazon-polly)|&#x60;amazon&#x60;|&#x60;boto3 (v1.15.18)&#x60;| |[**Google Cloud**](https://www.edenai.co/catalog/google-cloud-text-to-speech)|&#x60;google&#x60;|&#x60;v1&#x60;|
+Text-to-speech (TTS) system converts normal language text into speech.  **SUPPORTED LANGUAGE**  |Name|Type|Value| |----|----|-----| |**Arabic**|`string`|`ar-XA`| |**Chinese**|`string`|`cmn-CN`| |**Danish**|`string`|`da-DK`| |**Dutch**|`string`|`nl-NL`| |**English (US)**|`string`|`en-US`| |**English (UK)**|`string`|`en-GB`| |**German**|`string`|`de-DE`| |**Italy**|`string`|`it-IT`| |**Japanese**|`string`|`ja-JP`| |**Portuguese (Brazil)**|`string`|`pt-BR`| |**Portuguese (Portugal)**|`string`|`pt-PT`| |**Russian**|`string`|`ru-RU`| |**Spanish**|`string`|`es-ES`|  **AVAILABLE PROVIDERS**   |Name|Value|Version| |----|-----|-------| |**Microsoft Azure**|`microsoft`| `v1.0`  |**Amazon Web Services**|`amazon`| `boto3 (v1.15.18)`  |**Google Cloud**|`google`| `v1` 
 
 ### Example
 ```javascript
-import {EdenAiApiDocumentation} from 'eden_ai_api_documentation';
-let defaultClient = EdenAiApiDocumentation.ApiClient.instance;
+var EdenAiApiDocumentation = require('eden_ai_api_documentation');
+var defaultClient = EdenAiApiDocumentation.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-let Bearer = defaultClient.authentications['Bearer'];
+var Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdenAiApiDocumentation.SpeechApi();
-let text = "text_example"; // String | 
-let language = "language_example"; // String | 
-let option = "option_example"; // String | 
-let providers = "providers_example"; // String | 
+var apiInstance = new EdenAiApiDocumentation.SpeechApi();
 
-apiInstance.textToSpeech(text, language, option, providers, (error, data, response) => {
+var text = "text_example"; // String | Text to transform
+
+var language = "language_example"; // String | Language code expected (ex: fr-FR (French), en-US (English), es-ES (Spanish))
+
+var option = "option_example"; // String | Voice gender selected (ex: FEMALE ou MALE)
+
+var providers = "providers_example"; // String | Provider to compare (ex: [ 'amazon', 'microsoft', 'ibm','google'])
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.textToSpeech(text, language, option, providers, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **text** | **String**|  | 
- **language** | **String**|  | 
- **option** | **String**|  | 
- **providers** | **String**|  | 
+ **text** | **String**| Text to transform | 
+ **language** | **String**| Language code expected (ex: fr-FR (French), en-US (English), es-ES (Spanish)) | 
+ **option** | **String**| Voice gender selected (ex: FEMALE ou MALE) | 
+ **providers** | **String**| Provider to compare (ex: [ 'amazon', 'microsoft', 'ibm','google']) | 
 
 ### Return type
 
@@ -224,6 +252,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: multipart/form-data
+ - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json
 

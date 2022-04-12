@@ -1,6 +1,6 @@
 # EdenAiApiDocumentation.VisionApi
 
-All URIs are relative to *//https://api.edenai.run/v1/*
+All URIs are relative to *https://api.edenai.run/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -8,48 +8,53 @@ Method | HTTP request | Description
 [**faceDetection**](VisionApi.md#faceDetection) | **POST** /pretrained/vision/face_detection | 
 [**objectDetection**](VisionApi.md#objectDetection) | **POST** /pretrained/vision/object_detection | 
 
+
 <a name="explicitContentDetection"></a>
 # **explicitContentDetection**
-> InlineResponse2009 explicitContentDetection(files, providers)
+> InlineResponse20011 explicitContentDetection(files, providers)
 
 
 
-Explicit Content Detection detects adult only content in videos, who is generally inappropriate for people under the age of 18 and includes nudity, sexual activity and pornography ...  **AVAILABLE PROVIDERS**   |Name|Value|Version| |----|-----|-------| |[**Microsoft Azure**](https://www.edenai.co/catalog/azure-computer-vision)|&#x60;microsoft&#x60;|&#x60;v3.2&#x60;| |[**Amazon Web Services**](https://www.edenai.co/catalog/amazon-rekognition)|&#x60;amazon&#x60;|&#x60;boto3 (v1.15.18)&#x60;| |[**Google Cloud**](https://www.edenai.co/catalog/google-cloud-vision)|&#x60;google&#x60;|&#x60;v1&#x60;|
+Explicit Content Detection detects adult only content in videos, who is generally inappropriate for people under the age of 18 and includes nudity, sexual activity and pornography ...  **AVAILABLE PROVIDERS**   |Name|Value|Version| |----|-----|-------| |**Microsoft Azure**|`microsoft`| `v3.2`  |**Amazon Web Services**|`amazon`| `boto3 (v1.15.18)`  |**Google Cloud**|`google`| `v1` 
 
 ### Example
 ```javascript
-import {EdenAiApiDocumentation} from 'eden_ai_api_documentation';
-let defaultClient = EdenAiApiDocumentation.ApiClient.instance;
+var EdenAiApiDocumentation = require('eden_ai_api_documentation');
+var defaultClient = EdenAiApiDocumentation.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-let Bearer = defaultClient.authentications['Bearer'];
+var Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdenAiApiDocumentation.VisionApi();
-let files = "files_example"; // Blob | 
-let providers = "providers_example"; // String | 
+var apiInstance = new EdenAiApiDocumentation.VisionApi();
 
-apiInstance.explicitContentDetection(files, providers, (error, data, response) => {
+var files = "/path/to/file.txt"; // File | File Image to analyse (ex: pdf, jpg, jpeg, png, tiff)
+
+var providers = "providers_example"; // String | Provider to compare (ex: [ 'amazon', 'microsoft', 'google'])
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.explicitContentDetection(files, providers, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **files** | **Blob**|  | 
- **providers** | **String**|  | 
+ **files** | **File**| File Image to analyse (ex: pdf, jpg, jpeg, png, tiff) | 
+ **providers** | **String**| Provider to compare (ex: [ 'amazon', 'microsoft', 'google']) | 
 
 ### Return type
 
-[**InlineResponse2009**](InlineResponse2009.md)
+[**InlineResponse20011**](InlineResponse20011.md)
 
 ### Authorization
 
@@ -62,46 +67,50 @@ Name | Type | Description  | Notes
 
 <a name="faceDetection"></a>
 # **faceDetection**
-> InlineResponse20010 faceDetection(files, providers)
+> InlineResponse20012 faceDetection(files, providers)
 
 
 
-Face Detection is a computer technology being used in a variety of applicationsthat identifies human faces in digital images.  **AVAILABLE PROVIDERS**   |Name|Value|Version| |----|-----|-------| |[**Microsoft Azure**](https://www.edenai.co/catalog/azure-computer-vision)|&#x60;microsoft&#x60;|&#x60;v3.2&#x60;| |[**Amazon Web Services**](https://www.edenai.co/catalog/amazon-rekognition)|&#x60;amazon&#x60;|&#x60;boto3 (v1.15.18)&#x60;| |[**Google Cloud**](https://www.edenai.co/catalog/google-cloud-vision)|&#x60;google&#x60;|&#x60;v1&#x60;|
+Face Detection is a computer technology being used in a variety of applicationsthat identifies human faces in digital images.  **AVAILABLE PROVIDERS**   |Name|Value|Version| |----|-----|-------| |**Google Cloud**|`google`| `v1` 
 
 ### Example
 ```javascript
-import {EdenAiApiDocumentation} from 'eden_ai_api_documentation';
-let defaultClient = EdenAiApiDocumentation.ApiClient.instance;
+var EdenAiApiDocumentation = require('eden_ai_api_documentation');
+var defaultClient = EdenAiApiDocumentation.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-let Bearer = defaultClient.authentications['Bearer'];
+var Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdenAiApiDocumentation.VisionApi();
-let files = "files_example"; // Blob | 
-let providers = "providers_example"; // String | 
+var apiInstance = new EdenAiApiDocumentation.VisionApi();
 
-apiInstance.faceDetection(files, providers, (error, data, response) => {
+var files = "/path/to/file.txt"; // File | File Image to analyse (ex: pdf, jpg, jpeg, png, tiff)
+
+var providers = "providers_example"; // String | Provider to compare (ex: [ 'amazon', 'microsoft','google'])
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.faceDetection(files, providers, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **files** | **Blob**|  | 
- **providers** | **String**|  | 
+ **files** | **File**| File Image to analyse (ex: pdf, jpg, jpeg, png, tiff) | 
+ **providers** | **String**| Provider to compare (ex: [ 'amazon', 'microsoft','google']) | 
 
 ### Return type
 
-[**InlineResponse20010**](InlineResponse20010.md)
+[**InlineResponse20012**](InlineResponse20012.md)
 
 ### Authorization
 
@@ -114,46 +123,50 @@ Name | Type | Description  | Notes
 
 <a name="objectDetection"></a>
 # **objectDetection**
-> InlineResponse20011 objectDetection(files, providers)
+> InlineResponse20013 objectDetection(files, providers)
 
 
 
-Object Detection is a computer vision technique that allows us to identify and locate objects in an image or video  **AVAILABLE PROVIDERS**   |Name|Value|Version| |----|-----|-------| |[**Microsoft Azure**](https://www.edenai.co/catalog/azure-computer-vision)|&#x60;microsoft&#x60;|&#x60;v3.2&#x60;| |[**Amazon Web Services**](https://www.edenai.co/catalog/amazon-rekognition)|&#x60;amazon&#x60;|&#x60;boto3 (v1.15.18)&#x60;| |[**Google Cloud**](https://www.edenai.co/catalog/google-cloud-vision)|&#x60;google&#x60;|&#x60;v1&#x60;|
+Object Detection is a computer vision technique that allows us to identify and locate objects in an image or video  **AVAILABLE PROVIDERS**   |Name|Value|Version| |----|-----|-------| |**Microsoft Azure**|`microsoft`| `v3.2`  |**Amazon Web Services**|`amazon`| `boto3 (v1.15.18)`  |**Google Cloud**|`google`| `v1` 
 
 ### Example
 ```javascript
-import {EdenAiApiDocumentation} from 'eden_ai_api_documentation';
-let defaultClient = EdenAiApiDocumentation.ApiClient.instance;
+var EdenAiApiDocumentation = require('eden_ai_api_documentation');
+var defaultClient = EdenAiApiDocumentation.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-let Bearer = defaultClient.authentications['Bearer'];
+var Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdenAiApiDocumentation.VisionApi();
-let files = "files_example"; // Blob | 
-let providers = "providers_example"; // String | 
+var apiInstance = new EdenAiApiDocumentation.VisionApi();
 
-apiInstance.objectDetection(files, providers, (error, data, response) => {
+var files = "/path/to/file.txt"; // File | File Image to analyse (ex: pdf, jpg, jpeg, png, tiff)
+
+var providers = "providers_example"; // String | Provider to compare (ex: [ 'amazon', 'microsoft','google'])
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.objectDetection(files, providers, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **files** | **Blob**|  | 
- **providers** | **String**|  | 
+ **files** | **File**| File Image to analyse (ex: pdf, jpg, jpeg, png, tiff) | 
+ **providers** | **String**| Provider to compare (ex: [ 'amazon', 'microsoft','google']) | 
 
 ### Return type
 
-[**InlineResponse20011**](InlineResponse20011.md)
+[**InlineResponse20013**](InlineResponse20013.md)
 
 ### Authorization
 
