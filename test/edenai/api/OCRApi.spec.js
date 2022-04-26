@@ -12,10 +12,22 @@
 })(this, function (expect, EdenAiApiDocumentation) {
   "use strict";
 
+  const path = require('path');
+  var file_path = path.join(__dirname, "data/test_invoice.png")
+
   var instance;
   var fs = require("fs");
 
   beforeEach(function () {
+
+    require('dotenv').config();
+
+    var defaultClient = EdenAiApiDocumentation.ApiClient.instance;
+    var Bearer = defaultClient.authentications['Bearer'];
+    Bearer.apiKey = process.env.API_KEY;
+    Bearer.apiKeyPrefix = 'Bearer';
+
+
     instance = new EdenAiApiDocumentation.OCRApi();
   });
 
@@ -25,7 +37,7 @@
         it("should call ocr successfully", function (done) {
           // TODO: uncomment, update parameter values for ocr call and complete the assertions
 
-          var files = fs.ReadStream("/home/michel/Desktop/meuble.png");
+          var files = fs.ReadStream(file_path);
           var providers = "['amazon']";
           var language = "fr-FR";
 
@@ -86,9 +98,7 @@
       describe("ocrInvoice", function () {
         it("should call ocrInvoice successfully", function (done) {
           // TODO: uncomment, update parameter values for ocrInvoice call and complete the assertions
-          var files = fs.ReadStream(
-            "/home/michel/Desktop/Free-invoicing-page_Fr-Cover-picture.png"
-          );
+          var files = fs.ReadStream(file_path);
           var providers = "['dataleon']";
           var language = "fr-FR";
 

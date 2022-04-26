@@ -31,6 +31,15 @@
   var instance;
 
   beforeEach(function() {
+
+    require('dotenv').config();
+
+    var defaultClient = EdenAiApiDocumentation.ApiClient.instance;
+    var Bearer = defaultClient.authentications['Bearer'];
+    Bearer.apiKey = process.env.API_KEY;
+    Bearer.apiKeyPrefix = 'Bearer';
+
+
     instance = new EdenAiApiDocumentation.EdenAIToolsApi();
   });
 

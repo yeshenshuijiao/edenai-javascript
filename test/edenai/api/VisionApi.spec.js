@@ -28,10 +28,22 @@
 })(this, function (expect, EdenAiApiDocumentation) {
   "use strict";
 
+  const path = require('path');
+  var file_path = path.join(__dirname, "data/image.jpg")
+
   var instance;
   const fs = require("fs");
 
   beforeEach(function () {
+
+
+    require('dotenv').config();
+
+    var defaultClient = EdenAiApiDocumentation.ApiClient.instance;
+    var Bearer = defaultClient.authentications['Bearer'];
+    Bearer.apiKey = process.env.API_KEY;
+    Bearer.apiKeyPrefix = 'Bearer';
+
     instance = new EdenAiApiDocumentation.VisionApi();
   });
 
@@ -41,7 +53,7 @@
         it("should call explicitContentDetection successfully", function (done) {
           // TODO: uncomment, update parameter values for explicitContentDetection call and complete the assertions
 
-          var files = fs.ReadStream("/home/michel/Desktop/meuble.png");
+          var files = fs.ReadStream(file_path);
           var providers = "['google']";
 
           instance.explicitContentDetection(
@@ -505,7 +517,7 @@
         it("should call objectDetection successfully", function (done) {
           // TODO: uncomment, update parameter values for objectDetection call and complete the assertions
 
-          var files = fs.ReadStream("/home/michel/Desktop/meuble.png");
+          var files = fs.ReadStream(file_path);
           var providers = "['google']";
 
           instance.objectDetection(

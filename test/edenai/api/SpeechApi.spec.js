@@ -28,10 +28,22 @@
 })(this, function (expect, EdenAiApiDocumentation) {
   "use strict";
 
+  const path = require('path');
+  var file_path = path.join(__dirname, "data/audio.mp3")
+
   var instance;
   const fs = require("fs");
 
   beforeEach(function () {
+
+    require('dotenv').config();
+
+    var defaultClient = EdenAiApiDocumentation.ApiClient.instance;
+    var Bearer = defaultClient.authentications['Bearer'];
+    Bearer.apiKey = process.env.API_KEY;
+    Bearer.apiKeyPrefix = 'Bearer';
+
+
     instance = new EdenAiApiDocumentation.SpeechApi();
   });
 
@@ -42,7 +54,7 @@
           // TODO: uncomment, update parameter values for asyncSpeechToText call and complete the assertions
 
           var language = "fr-FR";
-          var files = fs.ReadStream("/home/michel/Downloads/ttsMP3.com_VoiceText_2022-3-22_10_44_57.mp3");
+          var files = fs.ReadStream(file_path);
           var providers = "['amazon']";
           var opts = {};
           opts.webhookReceiver = "";
@@ -117,11 +129,11 @@
           // TODO: uncomment, update parameter values for speechToText call and complete the assertions
 
           var language = "fr-FR";
-          var files = fs.createReadStream("/home/michel/Downloads/ttsMP3.com_VoiceText_2022-3-22_10_44_57.mp3");
+          var files = fs.createReadStream(file_path);
           var providers = "['microsoft']";
           var opts = { 
             'text': "ceci est un texte", // String | The input text for the first feature of the pipeline
-            'files': fs.createReadStream("/home/michel/Desktop/meuble.png") // File | The input file for the first feature of the pipeline
+            'files': files // File | The input file for the first feature of the pipeline
           };
 
           instance.speechToText(

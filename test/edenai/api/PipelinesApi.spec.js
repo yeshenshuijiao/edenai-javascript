@@ -28,10 +28,22 @@
 }(this, function(expect, EdenAiApiDocumentation) {
   'use strict';
 
+  const path = require('path');
+  var file_path = path.join(__dirname, "data/image.jpg")
+
   var instance;
   const fs = require('fs');
 
   beforeEach(function() {
+
+    require('dotenv').config();
+
+    var defaultClient = EdenAiApiDocumentation.ApiClient.instance;
+    var Bearer = defaultClient.authentications['Bearer'];
+    Bearer.apiKey = process.env.API_KEY;
+    Bearer.apiKeyPrefix = 'Bearer';
+
+
     instance = new EdenAiApiDocumentation.PipelinesApi();
   });
 
@@ -45,7 +57,7 @@
           var returnOnlyLast = true;
           var opts = { 
             'text': "ceci est un texte", // String | The input text for the first feature of the pipeline
-            'files': fs.createReadStream("/home/michel/Desktop/meuble.png") // File | The input file for the first feature of the pipeline
+            'files': fs.createReadStream(file_path) // File | The input file for the first feature of the pipeline
           };
 
           instance.pipelines(description, returnOnlyLast, opts, function(error, data, response) {
