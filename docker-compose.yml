@@ -1,0 +1,7 @@
+version: '3'
+services:
+  web:
+    build: .
+    volumes:
+      - ".:/edenai-javascript"
+    entrypoint: ["tail", "-f", "/dev/null"] 
